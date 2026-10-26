@@ -1,0 +1,12 @@
+{
+  "users": 100,
+  "history_events": 461314,
+  "query_rows": 24803,
+  "feature_seconds": 3.8291405830022995,
+  "load_seconds": 0.3193606249988079,
+  "matrix_bytes": 23249786,
+  "features": 224,
+  "peak_rss_bytes": 778584064,
+  "rows_per_second": 6477.432588947363,
+  "events_per_second": 120474.55297091739
+}

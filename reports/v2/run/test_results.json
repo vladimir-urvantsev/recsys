@@ -1,0 +1,541 @@
+{
+  "models": {
+    "manual": {
+      "logloss": 0.4792419082307696,
+      "roc_auc": 0.816631775654647,
+      "brier": 0.15761012919920198,
+      "average_precision": 0.899799747469739,
+      "ndcg_mixed": 0.7559988799307428,
+      "recall_mixed": 0.5556942759456115,
+      "user_macro_ndcg_mixed": 0.7556879826327073,
+      "user_macro_recall_mixed": 0.5876465261945429,
+      "ndcg_all_defined": 0.8008621676897164,
+      "recall_all_defined": 0.579843271735575,
+      "n_rows": 1110396,
+      "n_users": 6323,
+      "positive_rate": 0.6803293599760806,
+      "n_groups": 38948,
+      "n_groups_ge2": 34807,
+      "n_mixed_groups": 26424,
+      "n_mixed_users": 5712,
+      "n_all_positive_groups": 5953,
+      "n_no_positive_groups": 2430,
+      "n_singleton_groups": 4141,
+      "ranking_k": 10,
+      "tie_handling": "expected gain under a uniform random tie break"
+    },
+    "all_auto": {
+      "logloss": 0.47738330094611703,
+      "roc_auc": 0.8181809613837749,
+      "brier": 0.1569412843025766,
+      "average_precision": 0.9008662252961988,
+      "ndcg_mixed": 0.7573141538140326,
+      "recall_mixed": 0.5563407955847621,
+      "user_macro_ndcg_mixed": 0.7570050010113436,
+      "user_macro_recall_mixed": 0.5877135000133944,
+      "ndcg_all_defined": 0.8019356086228495,
+      "recall_all_defined": 0.5803709189834645,
+      "n_rows": 1110396,
+      "n_users": 6323,
+      "positive_rate": 0.6803293599760806,
+      "n_groups": 38948,
+      "n_groups_ge2": 34807,
+      "n_mixed_groups": 26424,
+      "n_mixed_users": 5712,
+      "n_all_positive_groups": 5953,
+      "n_no_positive_groups": 2430,
+      "n_singleton_groups": 4141,
+      "ranking_k": 10,
+      "tie_handling": "expected gain under a uniform random tie break"
+    },
+    "selected_auto": {
+      "logloss": 0.4795129440274214,
+      "roc_auc": 0.8165568420679608,
+      "brier": 0.15771804744572773,
+      "average_precision": 0.899746577107307,
+      "ndcg_mixed": 0.7555165068629544,
+      "recall_mixed": 0.5554421348640288,
+      "user_macro_ndcg_mixed": 0.754908947766021,
+      "user_macro_recall_mixed": 0.586991723499719,
+      "ndcg_all_defined": 0.8004684861891683,
+      "recall_all_defined": 0.5796374905965029,
+      "n_rows": 1110396,
+      "n_users": 6323,
+      "positive_rate": 0.6803293599760806,
+      "n_groups": 38948,
+      "n_groups_ge2": 34807,
+      "n_mixed_groups": 26424,
+      "n_mixed_users": 5712,
+      "n_all_positive_groups": 5953,
+      "n_no_positive_groups": 2430,
+      "n_singleton_groups": 4141,
+      "ranking_k": 10,
+      "tie_handling": "expected gain under a uniform random tie break"
+    },
+    "random_0": {
+      "logloss": 0.48123979114040166,
+      "roc_auc": 0.8150478729265136,
+      "brier": 0.1584416275908278,
+      "average_precision": 0.8990397159934405,
+      "ndcg_mixed": 0.7563090576970795,
+      "recall_mixed": 0.5556834959133448,
+      "user_macro_ndcg_mixed": 0.7561280109764029,
+      "user_macro_recall_mixed": 0.5872937577880736,
+      "ndcg_all_defined": 0.8011153145933109,
+      "recall_all_defined": 0.5798344737749049,
+      "n_rows": 1110396,
+      "n_users": 6323,
+      "positive_rate": 0.6803293599760806,
+      "n_groups": 38948,
+      "n_groups_ge2": 34807,
+      "n_mixed_groups": 26424,
+      "n_mixed_users": 5712,
+      "n_all_positive_groups": 5953,
+      "n_no_positive_groups": 2430,
+      "n_singleton_groups": 4141,
+      "ranking_k": 10,
+      "tie_handling": "expected gain under a uniform random tie break"
+    },
+    "random_1": {
+      "logloss": 0.4792991260666471,
+      "roc_auc": 0.8166822789321664,
+      "brier": 0.15762779725214468,
+      "average_precision": 0.899812397317655,
+      "ndcg_mixed": 0.7558884082054095,
+      "recall_mixed": 0.5554002262740146,
+      "user_macro_ndcg_mixed": 0.7554003557128802,
+      "user_macro_recall_mixed": 0.5867005567223028,
+      "ndcg_all_defined": 0.8007720078580395,
+      "recall_all_defined": 0.5796032875331389,
+      "n_rows": 1110396,
+      "n_users": 6323,
+      "positive_rate": 0.6803293599760806,
+      "n_groups": 38948,
+      "n_groups_ge2": 34807,
+      "n_mixed_groups": 26424,
+      "n_mixed_users": 5712,
+      "n_all_positive_groups": 5953,
+      "n_no_positive_groups": 2430,
+      "n_singleton_groups": 4141,
+      "ranking_k": 10,
+      "tie_handling": "expected gain under a uniform random tie break"
+    },
+    "random_2": {
+      "logloss": 0.4795044899444074,
+      "roc_auc": 0.8165044329203296,
+      "brier": 0.15771315217181975,
+      "average_precision": 0.8997762673434916,
+      "ndcg_mixed": 0.756206622383837,
+      "recall_mixed": 0.5557552400561054,
+      "user_macro_ndcg_mixed": 0.7558234539505835,
+      "user_macro_recall_mixed": 0.5875196414515873,
+      "ndcg_all_defined": 0.8010317135580971,
+      "recall_all_defined": 0.5798930266744419,
+      "n_rows": 1110396,
+      "n_users": 6323,
+      "positive_rate": 0.6803293599760806,
+      "n_groups": 38948,
+      "n_groups_ge2": 34807,
+      "n_mixed_groups": 26424,
+      "n_mixed_users": 5712,
+      "n_all_positive_groups": 5953,
+      "n_no_positive_groups": 2430,
+      "n_singleton_groups": 4141,
+      "ranking_k": 10,
+      "tie_handling": "expected gain under a uniform random tie break"
+    },
+    "history_global": {
+      "logloss": 0.45671866907062264,
+      "roc_auc": 0.8352771860563908,
+      "brier": 0.14946757536366026,
+      "average_precision": 0.9115897694216506,
+      "ndcg_mixed": 0.7266430086246498,
+      "recall_mixed": 0.5404772328349169,
+      "user_macro_ndcg_mixed": 0.7320322048210949,
+      "user_macro_recall_mixed": 0.5760275333033483,
+      "ndcg_all_defined": 0.776903816286183,
+      "recall_all_defined": 0.5674241116170652,
+      "n_rows": 1110396,
+      "n_users": 6323,
+      "positive_rate": 0.6803293599760806,
+      "n_groups": 38948,
+      "n_groups_ge2": 34807,
+      "n_mixed_groups": 26424,
+      "n_mixed_users": 5712,
+      "n_all_positive_groups": 5953,
+      "n_no_positive_groups": 2430,
+      "n_singleton_groups": 4141,
+      "ranking_k": 10,
+      "tie_handling": "expected gain under a uniform random tie break"
+    },
+    "history_pure": {
+      "logloss": 0.46123864394351133,
+      "roc_auc": 0.832088368389508,
+      "brier": 0.15102447585321993,
+      "average_precision": 0.9095408661858764,
+      "ndcg_mixed": 0.7211570723854022,
+      "recall_mixed": 0.5373307236521347,
+      "user_macro_ndcg_mixed": 0.7271682566796057,
+      "user_macro_recall_mixed": 0.5728685334228867,
+      "ndcg_all_defined": 0.7724265522040914,
+      "recall_all_defined": 0.5648561356265214,
+      "n_rows": 1110396,
+      "n_users": 6323,
+      "positive_rate": 0.6803293599760806,
+      "n_groups": 38948,
+      "n_groups_ge2": 34807,
+      "n_mixed_groups": 26424,
+      "n_mixed_users": 5712,
+      "n_all_positive_groups": 5953,
+      "n_no_positive_groups": 2430,
+      "n_singleton_groups": 4141,
+      "ranking_k": 10,
+      "tie_handling": "expected gain under a uniform random tie break"
+    },
+    "history_no_encoder": {
+      "logloss": 0.4584301007601456,
+      "roc_auc": 0.8344142213672261,
+      "brier": 0.1500228288017271,
+      "average_precision": 0.9109790655680979,
+      "ndcg_mixed": 0.7268426281677318,
+      "recall_mixed": 0.5406975742074606,
+      "user_macro_ndcg_mixed": 0.7325167747318662,
+      "user_macro_recall_mixed": 0.5764647889920784,
+      "ndcg_all_defined": 0.7770667327641272,
+      "recall_all_defined": 0.567603939903444,
+      "n_rows": 1110396,
+      "n_users": 6323,
+      "positive_rate": 0.6803293599760806,
+      "n_groups": 38948,
+      "n_groups_ge2": 34807,
+      "n_mixed_groups": 26424,
+      "n_mixed_users": 5712,
+      "n_all_positive_groups": 5953,
+      "n_no_positive_groups": 2430,
+      "n_singleton_groups": 4141,
+      "ranking_k": 10,
+      "tie_handling": "expected gain under a uniform random tie break"
+    },
+    "hybrid": {
+      "logloss": 0.454892259427737,
+      "roc_auc": 0.8368183417974641,
+      "brier": 0.1486235698318447,
+      "average_precision": 0.91217130330629,
+      "ndcg_mixed": 0.7396758691457772,
+      "recall_mixed": 0.5475136600817535,
+      "user_macro_ndcg_mixed": 0.7420316314244746,
+      "user_macro_recall_mixed": 0.5811518701251412,
+      "ndcg_all_defined": 0.7875403887422561,
+      "recall_all_defined": 0.5731667855389977,
+      "n_rows": 1110396,
+      "n_users": 6323,
+      "positive_rate": 0.6803293599760806,
+      "n_groups": 38948,
+      "n_groups_ge2": 34807,
+      "n_mixed_groups": 26424,
+      "n_mixed_users": 5712,
+      "n_all_positive_groups": 5953,
+      "n_no_positive_groups": 2430,
+      "n_singleton_groups": 4141,
+      "ranking_k": 10,
+      "tie_handling": "expected gain under a uniform random tie break"
+    }
+  },
+  "primary_history_vs_autofe": {
+    "resampling_unit": "user (all rows and user-day groups retained together)",
+    "delta_definition": "proposed minus baseline",
+    "interval_method": "paired user-cluster percentile bootstrap, 95%",
+    "bootstrap_fraction_note": "Descriptive fraction of resamples improving; not a p-value or posterior probability.",
+    "n_users": 6323,
+    "n_mixed_users": 5712,
+    "n_boot": 5000,
+    "seed": 20261026,
+    "logloss": {
+      "delta": -0.022794274956798685,
+      "ci95": [
+        -0.027199084517142248,
+        -0.0187771490327193
+      ],
+      "bootstrap_fraction_improved": 1.0,
+      "n_valid": 5000
+    },
+    "user_macro_ndcg_mixed": {
+      "delta": -0.02287674294492618,
+      "ci95": [
+        -0.025061520055646755,
+        -0.020717565393323673
+      ],
+      "bootstrap_fraction_improved": 0.0,
+      "n_valid": 5000
+    }
+  },
+  "temporal_sensitivity": {
+    "delta_logloss": -0.022794274956798685,
+    "blocks_days": {
+      "3": {
+        "ci95": [
+          -0.02518839033720657,
+          -0.02012327519016696
+        ],
+        "n_boot": 5000
+      },
+      "7": {
+        "ci95": [
+          -0.024432337014956645,
+          -0.02062097149617425
+        ],
+        "n_boot": 5000
+      }
+    },
+    "n_observation_days": 31,
+    "seed": 20261026,
+    "note": "Secondary circular day-block bootstrap; no multiplicity adjustment; not a joint user/time interval or evidence for a new calendar regime.",
+    "daily_delta": [
+      {
+        "day": 270,
+        "rows": 37026,
+        "delta_logloss": -0.029342947376347857
+      },
+      {
+        "day": 271,
+        "rows": 35493,
+        "delta_logloss": -0.017446688095185243
+      },
+      {
+        "day": 272,
+        "rows": 35532,
+        "delta_logloss": -0.01984644711342106
+      },
+      {
+        "day": 273,
+        "rows": 39370,
+        "delta_logloss": -0.03193667609586516
+      },
+      {
+        "day": 274,
+        "rows": 34111,
+        "delta_logloss": -0.026219992578402487
+      },
+      {
+        "day": 275,
+        "rows": 28284,
+        "delta_logloss": -0.017678916177389984
+      },
+      {
+        "day": 276,
+        "rows": 32021,
+        "delta_logloss": -0.029236895608835124
+      },
+      {
+        "day": 277,
+        "rows": 34783,
+        "delta_logloss": -0.013857508018612899
+      },
+      {
+        "day": 278,
+        "rows": 32445,
+        "delta_logloss": -0.020109465988092393
+      },
+      {
+        "day": 279,
+        "rows": 34558,
+        "delta_logloss": -0.010366474203445074
+      },
+      {
+        "day": 280,
+        "rows": 35952,
+        "delta_logloss": -0.01603553164701169
+      },
+      {
+        "day": 281,
+        "rows": 34233,
+        "delta_logloss": -0.008027802660181695
+      },
+      {
+        "day": 282,
+        "rows": 30559,
+        "delta_logloss": -0.029308324608839482
+      },
+      {
+        "day": 283,
+        "rows": 34040,
+        "delta_logloss": -0.043801646863514565
+      },
+      {
+        "day": 284,
+        "rows": 34188,
+        "delta_logloss": -0.013076359745415118
+      },
+      {
+        "day": 285,
+        "rows": 36875,
+        "delta_logloss": -0.026477079151633786
+      },
+      {
+        "day": 286,
+        "rows": 38386,
+        "delta_logloss": -0.025887982419400237
+      },
+      {
+        "day": 287,
+        "rows": 42197,
+        "delta_logloss": -0.02284875978819438
+      },
+      {
+        "day": 288,
+        "rows": 37263,
+        "delta_logloss": -0.014349788197875387
+      },
+      {
+        "day": 289,
+        "rows": 30760,
+        "delta_logloss": -0.023907437670778013
+      },
+      {
+        "day": 290,
+        "rows": 36319,
+        "delta_logloss": -0.03760154006669772
+      },
+      {
+        "day": 291,
+        "rows": 37057,
+        "delta_logloss": -0.023899003749383935
+      },
+      {
+        "day": 292,
+        "rows": 41266,
+        "delta_logloss": -0.02308476989970109
+      },
+      {
+        "day": 293,
+        "rows": 38371,
+        "delta_logloss": -0.026500628652393894
+      },
+      {
+        "day": 294,
+        "rows": 34091,
+        "delta_logloss": -0.015408616614928315
+      },
+      {
+        "day": 295,
+        "rows": 33027,
+        "delta_logloss": -0.0124189429347143
+      },
+      {
+        "day": 296,
+        "rows": 29868,
+        "delta_logloss": -0.03935175495824706
+      },
+      {
+        "day": 297,
+        "rows": 40019,
+        "delta_logloss": -0.02843360007545427
+      },
+      {
+        "day": 298,
+        "rows": 38656,
+        "delta_logloss": -0.020890391749174682
+      },
+      {
+        "day": 299,
+        "rows": 40132,
+        "delta_logloss": -0.020114067689148543
+      },
+      {
+        "day": 300,
+        "rows": 43514,
+        "delta_logloss": -0.019432291689102855
+      }
+    ]
+  },
+  "secondary_vs_manual": {
+    "selected_auto": {
+      "resampling_unit": "user (all rows and user-day groups retained together)",
+      "delta_definition": "proposed minus baseline",
+      "interval_method": "paired user-cluster percentile bootstrap, 95%",
+      "bootstrap_fraction_note": "Descriptive fraction of resamples improving; not a p-value or posterior probability.",
+      "n_users": 6323,
+      "n_mixed_users": 5712,
+      "n_boot": 5000,
+      "seed": 20261026,
+      "logloss": {
+        "delta": 0.0002710357966517431,
+        "ci95": [
+          -0.0003118697608896479,
+          0.0009064565953314225
+        ],
+        "bootstrap_fraction_improved": 0.1916,
+        "n_valid": 5000
+      },
+      "user_macro_ndcg_mixed": {
+        "delta": -0.000779034866686368,
+        "ci95": [
+          -0.0015530830695180515,
+          3.1450885409941453e-06
+        ],
+        "bootstrap_fraction_improved": 0.0262,
+        "n_valid": 5000
+      }
+    },
+    "all_auto": {
+      "resampling_unit": "user (all rows and user-day groups retained together)",
+      "delta_definition": "proposed minus baseline",
+      "interval_method": "paired user-cluster percentile bootstrap, 95%",
+      "bootstrap_fraction_note": "Descriptive fraction of resamples improving; not a p-value or posterior probability.",
+      "n_users": 6323,
+      "n_mixed_users": 5712,
+      "n_boot": 5000,
+      "seed": 20261026,
+      "logloss": {
+        "delta": -0.001858607284652616,
+        "ci95": [
+          -0.0027672706471143483,
+          -0.0009007769338413248
+        ],
+        "bootstrap_fraction_improved": 1.0,
+        "n_valid": 5000
+      },
+      "user_macro_ndcg_mixed": {
+        "delta": 0.0013170183786363426,
+        "ci95": [
+          0.00039102198415687695,
+          0.0022569243089407055
+        ],
+        "bootstrap_fraction_improved": 0.9948,
+        "n_valid": 5000
+      }
+    },
+    "hybrid": {
+      "resampling_unit": "user (all rows and user-day groups retained together)",
+      "delta_definition": "proposed minus baseline",
+      "interval_method": "paired user-cluster percentile bootstrap, 95%",
+      "bootstrap_fraction_note": "Descriptive fraction of resamples improving; not a p-value or posterior probability.",
+      "n_users": 6323,
+      "n_mixed_users": 5712,
+      "n_boot": 5000,
+      "seed": 20261026,
+      "logloss": {
+        "delta": -0.024349648803032642,
+        "ci95": [
+          -0.027973904519954396,
+          -0.021030121667869706
+        ],
+        "bootstrap_fraction_improved": 1.0,
+        "n_valid": 5000
+      },
+      "user_macro_ndcg_mixed": {
+        "delta": -0.013656351208232742,
+        "ci95": [
+          -0.015327373177612296,
+          -0.012032642414947605
+        ],
+        "bootstrap_fraction_improved": 0.0,
+        "n_valid": 5000
+      }
+    }
+  },
+  "selection_sha256": "2f239d771533708ff2b9e18baea1108c235b17e4c17aa86eaee9aec522c436c6",
+  "prediction_lock_sha256": "b84b773fee5dd147a06dc0f343c1784e987dd1c2f479986afcac0798e77b58b5",
+  "predictions_sha256": "1bd3fe06fb29def69ff06a0745ffd57ba2fff58f0b79ab2babe36bf6833bd070",
+  "is_pilot": false
+}

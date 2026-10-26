@@ -1,0 +1,19 @@
+{
+  "observer": "external /proc VmHWM sampling every 5 seconds; includes process high-water mark before observer start",
+  "processes": [
+    {
+      "pid": 1190,
+      "command": ".venv/bin/python -u -m recsys_history_v2.run --config configs/v2.yaml --phase prepare",
+      "peak_rss_bytes": 33536249856,
+      "samples": 88,
+      "latest_rss_bytes": 1587261440
+    },
+    {
+      "pid": 1620,
+      "command": ".venv/bin/python -u scripts/profile_v2_gpu.py --config configs/v2.yaml",
+      "peak_rss_bytes": 2777165824,
+      "samples": 3,
+      "latest_rss_bytes": 0
+    }
+  ]
+}

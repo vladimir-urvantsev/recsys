@@ -1,0 +1,8 @@
+{
+  "selection_sha256": "2d14545e91619f248fd1d0f10e06132995e7f957ab8f281fe60f45bfea7a363c",
+  "prediction_lock_sha256": "02c3a13447f85fa151288ee1251104f50828656fde6b4798128649d7d77ecb4c",
+  "predictions_sha256": "6fb248faf1c0d69445b40dc33d2cd4c8f11a91d08d7c233c55d31506ce31fd04",
+  "model_fit_calls": 0,
+  "model_prediction_calls": 0,
+  "primary_delta_definition": "history_global minus selected_auto"
+}

@@ -1,0 +1,214 @@
+{
+  "status": "completed",
+  "diagnostic_only": true,
+  "selection_sha256": "2f239d771533708ff2b9e18baea1108c235b17e4c17aa86eaee9aec522c436c6",
+  "prediction_lock_sha256": "b84b773fee5dd147a06dc0f343c1784e987dd1c2f479986afcac0798e77b58b5",
+  "predictions_sha256": "1bd3fe06fb29def69ff06a0745ffd57ba2fff58f0b79ab2babe36bf6833bd070",
+  "test_results_sha256": "f121b89fac927e99318e980255960f980d2b7c526020777ccbee5e571073a142",
+  "preparation_sha256": "5d7c7212225e8119e65e0224cb450d7742428cff6d7a64d2fcadceb214fe6fba",
+  "script_sha256": "50015c9673f6eace35354bcd4a0bd9d4e5fe29c638ba464f435b6d9ed1998b93",
+  "lock_helper_sha256": "035279ea3d15bde8e9d5889d49da18c8d4756b60e3553b579e5439d6aa90a440",
+  "csv": {
+    "path": "/workspace/recsys-v2/reports/v2/run/memory_diagnostic.csv",
+    "sha256": "59d95c0e874e78cef49a47830105f997dc54cd1aba90d1d1160ac11f4172cb19"
+  },
+  "fit_calls": 0,
+  "model_selection_calls": 0,
+  "weight_changes": 0,
+  "neural_inference_calls": 0,
+  "classification_only": true,
+  "is_pilot": false,
+  "test_rows": 1110396,
+  "test_users": 6323,
+  "entities": {
+    "item": {
+      "full_prior_rows": 593996,
+      "retained_prior_rows": 187891,
+      "missing_context_prior_rows": 406105,
+      "no_full_prior_rows": 516400,
+      "retention_fraction_given_full_prior": 0.3163169448952518,
+      "metadata_missing_rows": 0,
+      "retained_without_full_prior_rows": 0
+    },
+    "artist": {
+      "full_prior_rows": 852070,
+      "retained_prior_rows": 601991,
+      "missing_context_prior_rows": 250079,
+      "no_full_prior_rows": 258326,
+      "retention_fraction_given_full_prior": 0.7065041604563005,
+      "metadata_missing_rows": 75,
+      "retained_without_full_prior_rows": 0
+    },
+    "album": {
+      "full_prior_rows": 674897,
+      "retained_prior_rows": 312807,
+      "missing_context_prior_rows": 362090,
+      "no_full_prior_rows": 435499,
+      "retention_fraction_given_full_prior": 0.4634885026900401,
+      "metadata_missing_rows": 0,
+      "retained_without_full_prior_rows": 0
+    }
+  },
+  "rows": [
+    {
+      "entity": "item",
+      "bin": "no_full_prior",
+      "rows": 516400,
+      "users": 6283,
+      "positive_rate": 0.6377672347017815,
+      "selected_auto_logloss": 0.5066965781990009,
+      "history_global_logloss": 0.4713041028183838,
+      "delta_logloss": -0.03539247538061713,
+      "selected_auto_auc": 0.8114661017828302,
+      "history_global_auc": 0.8391619033650519
+    },
+    {
+      "entity": "item",
+      "bin": "full_prior_retained",
+      "rows": 187891,
+      "users": 5331,
+      "positive_rate": 0.7234353960540952,
+      "selected_auto_logloss": 0.46077012807723255,
+      "history_global_logloss": 0.4492468312048493,
+      "delta_logloss": -0.011523296872383237,
+      "selected_auto_auc": 0.8077679719878802,
+      "history_global_auc": 0.8198796611100988
+    },
+    {
+      "entity": "item",
+      "bin": "full_prior_missing_context",
+      "rows": 406105,
+      "users": 5016,
+      "positive_rate": 0.7145073318476749,
+      "selected_auto_logloss": 0.4536181083211219,
+      "history_global_logloss": 0.44162890928213,
+      "delta_logloss": -0.011989199038991927,
+      "selected_auto_auc": 0.8208320591990006,
+      "history_global_auc": 0.8321688162821329
+    },
+    {
+      "entity": "artist",
+      "bin": "no_full_prior",
+      "rows": 258326,
+      "users": 6135,
+      "positive_rate": 0.6122806066752863,
+      "selected_auto_logloss": 0.5307424853749901,
+      "history_global_logloss": 0.4891164819145576,
+      "delta_logloss": -0.04162600346043255,
+      "selected_auto_auc": 0.7988198843654651,
+      "history_global_auc": 0.8318841020146743
+    },
+    {
+      "entity": "artist",
+      "bin": "full_prior_retained",
+      "rows": 601991,
+      "users": 6075,
+      "positive_rate": 0.7091418310240518,
+      "selected_auto_logloss": 0.46358080219708386,
+      "history_global_logloss": 0.44640101290394524,
+      "delta_logloss": -0.017179789293138625,
+      "selected_auto_auc": 0.8154235759504325,
+      "history_global_auc": 0.8305664027658688
+    },
+    {
+      "entity": "artist",
+      "bin": "full_prior_missing_context",
+      "rows": 250079,
+      "users": 5061,
+      "positive_rate": 0.6812647203483699,
+      "selected_auto_logloss": 0.4649458811970142,
+      "history_global_logloss": 0.44808915100917807,
+      "delta_logloss": -0.016856730187836122,
+      "selected_auto_auc": 0.8281300931041988,
+      "history_global_auc": 0.8423140035440575
+    },
+    {
+      "entity": "album",
+      "bin": "no_full_prior",
+      "rows": 435499,
+      "users": 6253,
+      "positive_rate": 0.628952075664927,
+      "selected_auto_logloss": 0.5156880692066032,
+      "history_global_logloss": 0.47847150245746534,
+      "delta_logloss": -0.037216566749137814,
+      "selected_auto_auc": 0.8065174050708508,
+      "history_global_auc": 0.835912387190011
+    },
+    {
+      "entity": "album",
+      "bin": "full_prior_retained",
+      "rows": 312807,
+      "users": 5784,
+      "positive_rate": 0.7265374496095036,
+      "selected_auto_logloss": 0.45216484990532996,
+      "history_global_logloss": 0.4387984300075864,
+      "delta_logloss": -0.013366419897743564,
+      "selected_auto_auc": 0.8149265196926722,
+      "history_global_auc": 0.8277237637486918
+    },
+    {
+      "entity": "album",
+      "bin": "full_prior_missing_context",
+      "rows": 362090,
+      "users": 5070,
+      "positive_rate": 0.7022038719655335,
+      "selected_auto_logloss": 0.45962961236303024,
+      "history_global_logloss": 0.44603690219900133,
+      "delta_logloss": -0.01359271016402891,
+      "selected_auto_auc": 0.8222859777253526,
+      "history_global_auc": 0.8345772154506584
+    }
+  ],
+  "overall_classification_metrics": {
+    "selected_auto": {
+      "logloss": 0.4795129440274214,
+      "auc": 0.8165568420679608
+    },
+    "history_global": {
+      "logloss": 0.45671866907062264,
+      "auc": 0.8352771860563908
+    }
+  },
+  "history_counts": {
+    "test_groups": 38948,
+    "empty_context_groups": 234,
+    "available_events_quantiles": {
+      "0": 0.0,
+      "0.1": 506.0,
+      "0.5": 4100.0,
+      "0.9": 14127.600000000006,
+      "1": 27367.0
+    },
+    "retained_events_quantiles": {
+      "0": 0.0,
+      "0.1": 506.0,
+      "0.5": 512.0,
+      "0.9": 512.0,
+      "1": 512.0
+    },
+    "retained_fraction_nonempty_quantiles": {
+      "0": 0.01870866371907772,
+      "0.1": 0.03615640473537371,
+      "0.5": 0.1234032368625902,
+      "0.9": 0.9516728624535316,
+      "1": 1.0
+    },
+    "count_scope": "All event types; matching entity presence above is LISTEN-only"
+  },
+  "definition": {
+    "full_prior": "corresponding full-past user_item/user_artist/user_album log1p LISTEN-count feature >0",
+    "full_count_columns": {
+      "item": "user_item__count__all",
+      "artist": "user_artist__count__all",
+      "album": "user_album__count__all"
+    },
+    "retained_prior": "candidate raw ID>=0 matches context raw ID>=0 with history_mask=True and history_type==1",
+    "retention_denominator": "test query rows with full-past matching LISTEN presence, separately per entity; not unique events or all test rows",
+    "metadata_missing": "negative candidate metadata ID; a subset of no_full_prior, never a known match",
+    "delta_logloss": "history_global minus selected_auto; negative favours history",
+    "bins_fixed_without_current_outcomes": true,
+    "ranking": "No ranking metric is recomputed on subgroup-filtered candidates",
+    "interpretation": "Exploratory post-hoc association, not causal evidence that bounded memory caused a quality difference; no selection, new variants, or multiplicity-adjusted inference"
+  },
+  "elapsed_seconds": 17.68714741501026
+}

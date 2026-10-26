@@ -1,0 +1,21 @@
+tabular tune manual/0: LL=0.506602, trees=15, 0.2s
+tabular tune manual/1: LL=0.500853, trees=17, 0.1s
+tabular tune all_auto/0: LL=0.500379, trees=22, 0.1s
+tabular tune all_auto/1: LL=0.528162, trees=23, 0.1s
+tabular select prefix=0: LL=0.468757, features=98
+tabular select prefix=1: LL=0.458166, features=112
+tabular select prefix=2: LL=0.469566, features=126
+tabular select prefix=3: LL=0.492814, features=140
+tabular final manual/17: reused
+tabular final all_auto/17: reused
+tabular final selected_auto/17: reused
+tabular final random_0/17: reused
+tabular final random_1/17: 0.1s
+tabular final random_2/17: 0.1s
+history seed=17 epoch=1 train=0.645132 tune=0.626775572852276
+history seed=17 epoch=2 train=0.589291 tune=0.640947460607647
+history seed=17 epoch=1 train=0.646028 tune=0.6286646345620063
+history seed=17 epoch=2 train=0.592947 tune=0.6419205612702266
+history seed=17 epoch=1 train=0.687268 tune=None
+history seed=17 epoch=1 train=0.644020 tune=None
+SELECTION LOCKED before confirmation-label release

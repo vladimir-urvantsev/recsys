@@ -1,0 +1,244 @@
+{
+  "schema": "v2-execution-supplement-1",
+  "purpose": "post-evaluation provenance; no training, prediction or selection",
+  "python": "3.12.3",
+  "platform": "Linux-6.8.0-147-generic-x86_64-with-glibc2.39",
+  "torch": "2.8.0+cu128",
+  "cuda_build": "12.8",
+  "cudnn": 91002,
+  "gpu": [
+    {
+      "name": "NVIDIA A100-SXM4-80GB",
+      "driver_version": "595.91.07",
+      "memory_total_mib": "81920",
+      "compute_capability": "8.0"
+    }
+  ],
+  "container_cgroups": {
+    "memory.max": "249999998976",
+    "cpu.max": "1360000 100000",
+    "cpuset.cpus.effective": "0-127"
+  },
+  "configured_threads": 16,
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": null,
+    "TORCH_ALLOW_TF32_CUBLAS_OVERRIDE": null,
+    "CUBLAS_WORKSPACE_CONFIG": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "OMP_NUM_THREADS": null
+  },
+  "fresh_process_backend_defaults": {
+    "deterministic_algorithms": false,
+    "cudnn_deterministic": false,
+    "cudnn_benchmark": false,
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true
+  },
+  "backend_scope": "Fresh process only. Training code does not override these flags. This is not a promise of bitwise repeat training across hardware/runtimes.",
+  "job_walltimes": {
+    "setup": {
+      "exit_code": 0,
+      "seconds": 32.38785672187805
+    },
+    "download": {
+      "exit_code": 0,
+      "seconds": 5.808435678482056
+    },
+    "prepare": {
+      "exit_code": 0,
+      "seconds": 1088.938566684723
+    },
+    "search": {
+      "exit_code": 0,
+      "seconds": 4173.680366516113
+    },
+    "finish": {
+      "exit_code": 1,
+      "seconds": 3004.4499855041504
+    },
+    "postcheck": {
+      "exit_code": 0,
+      "seconds": 91.64804720878601
+    }
+  },
+  "stage_resource_observations": {
+    "prepare": {
+      "observer": "external /proc VmHWM sampling every 5 seconds; includes process high-water mark before observer start",
+      "processes": [
+        {
+          "pid": 1190,
+          "command": ".venv/bin/python -u -m recsys_history_v2.run --config configs/v2.yaml --phase prepare",
+          "peak_rss_bytes": 33536249856,
+          "samples": 88,
+          "latest_rss_bytes": 1587261440
+        },
+        {
+          "pid": 1620,
+          "command": ".venv/bin/python -u scripts/profile_v2_gpu.py --config configs/v2.yaml",
+          "peak_rss_bytes": 2777165824,
+          "samples": 3,
+          "latest_rss_bytes": 0
+        }
+      ]
+    },
+    "search": {
+      "observer": "external /proc VmHWM sampling every 5 seconds; includes process high-water mark before observer start",
+      "processes": [
+        {
+          "pid": 1727,
+          "command": ".venv/bin/python -u -m recsys_history_v2.run --config configs/v2.yaml --phase search",
+          "peak_rss_bytes": 11149631488,
+          "samples": 834,
+          "latest_rss_bytes": 4784164864
+        }
+      ]
+    },
+    "finish": {
+      "observer": "external /proc VmHWM sampling every 5 seconds; includes process high-water mark before observer start",
+      "processes": [
+        {
+          "pid": 2894,
+          "command": ".venv/bin/python await_search.py",
+          "peak_rss_bytes": 11907072,
+          "samples": 203,
+          "latest_rss_bytes": 11907072
+        },
+        {
+          "pid": 3540,
+          "command": ".venv/bin/python -u -m recsys_history_v2.run --config configs/v2.yaml --phase evaluate",
+          "peak_rss_bytes": 9455562752,
+          "samples": 45,
+          "latest_rss_bytes": 5408813056
+        },
+        {
+          "pid": 3904,
+          "command": ".venv/bin/python -u scripts/diagnose_v2_seeds.py --config configs/v2.yaml",
+          "peak_rss_bytes": 8300863488,
+          "samples": 55,
+          "latest_rss_bytes": 5568913408
+        },
+        {
+          "pid": 4333,
+          "command": ".venv/bin/python -u scripts/diagnose_v2_memory.py --config configs/v2.yaml",
+          "peak_rss_bytes": 1690865664,
+          "samples": 4,
+          "latest_rss_bytes": 1637036032
+        },
+        {
+          "pid": 4357,
+          "command": ".venv/bin/python -u -m recsys_history_v2.run --config configs/v2.yaml --phase report",
+          "peak_rss_bytes": 1415213056,
+          "samples": 2,
+          "latest_rss_bytes": 1297788928
+        },
+        {
+          "pid": 4395,
+          "command": ".venv/bin/python -u scripts/audit_v2_results.py --config configs/v2.yaml",
+          "peak_rss_bytes": 1851695104,
+          "samples": 16,
+          "latest_rss_bytes": 1851695104
+        }
+      ]
+    }
+  },
+  "cost_scope": "Stage walltimes include I/O and verification; setup/download may overlap. They are not summed billing hours or an isolated fit benchmark.",
+  "config_sha256": "da4464aec84e1df1e5eddf176af6ad63820e2b9ed9c55983b9684ef5f525281b",
+  "frozen_sources": {
+    "recsys_history_v2/.___init__.py": "1b4bb2d1d31dbfe196d8920fd17559502e90ccce36ba684fc5705e9fd67b5787",
+    "recsys_history_v2/._contexts.py": "1b4bb2d1d31dbfe196d8920fd17559502e90ccce36ba684fc5705e9fd67b5787",
+    "recsys_history_v2/._data.py": "1b4bb2d1d31dbfe196d8920fd17559502e90ccce36ba684fc5705e9fd67b5787",
+    "recsys_history_v2/._model.py": "1b4bb2d1d31dbfe196d8920fd17559502e90ccce36ba684fc5705e9fd67b5787",
+    "recsys_history_v2/._report.py": "1b4bb2d1d31dbfe196d8920fd17559502e90ccce36ba684fc5705e9fd67b5787",
+    "recsys_history_v2/._run.py": "1b4bb2d1d31dbfe196d8920fd17559502e90ccce36ba684fc5705e9fd67b5787",
+    "recsys_history_v2/._statistics.py": "1b4bb2d1d31dbfe196d8920fd17559502e90ccce36ba684fc5705e9fd67b5787",
+    "recsys_history_v2/._tabular.py": "1b4bb2d1d31dbfe196d8920fd17559502e90ccce36ba684fc5705e9fd67b5787",
+    "recsys_history_v2/._trainer.py": "1b4bb2d1d31dbfe196d8920fd17559502e90ccce36ba684fc5705e9fd67b5787",
+    "recsys_history_v2/__init__.py": "0915d766b6f002306fb5d734a204e4a2b4d7c831bbf2dd86de02b0aa80cc24a6",
+    "recsys_history_v2/contexts.py": "b0aa8c739103ab21597e5554edbc7f86602ff2cd3c8bc197be5cc5cd4c8848dd",
+    "recsys_history_v2/data.py": "ccdac1b147b0f19194fd09749f28cf772370c4cecffb546f39c3701256ef06db",
+    "recsys_history_v2/model.py": "c7f63116d2e35c62c0658f545ac7e9bfe111aee59ff73a2592f93265bcab9c9b",
+    "recsys_history_v2/run.py": "8fef5574aa1882cd6bcb59aa86de923c27f706999523557afeac8b6b3dfd3c6c",
+    "recsys_history_v2/statistics.py": "6f9c6d45684d54a1e7b253978d8640bbf24964c593095c34d36f9fe424106718",
+    "recsys_history_v2/tabular.py": "db759c7362c06a190bb0ef0ec49f3f96b35a7b2556beab9e663eb942f0814480",
+    "recsys_history_v2/trainer.py": "d30f72e8c8f55b5e169ba4fc24d9875ca3eec98baf4c65d557862f705a28a7ee",
+    "recsys_research/.___init__.py": "1b4bb2d1d31dbfe196d8920fd17559502e90ccce36ba684fc5705e9fd67b5787",
+    "recsys_research/._data.py": "1b4bb2d1d31dbfe196d8920fd17559502e90ccce36ba684fc5705e9fd67b5787",
+    "recsys_research/._features.py": "1b4bb2d1d31dbfe196d8920fd17559502e90ccce36ba684fc5705e9fd67b5787",
+    "recsys_research/._metrics.py": "1b4bb2d1d31dbfe196d8920fd17559502e90ccce36ba684fc5705e9fd67b5787",
+    "recsys_research/._report.py": "1b4bb2d1d31dbfe196d8920fd17559502e90ccce36ba684fc5705e9fd67b5787",
+    "recsys_research/._run.py": "1b4bb2d1d31dbfe196d8920fd17559502e90ccce36ba684fc5705e9fd67b5787",
+    "recsys_research/__init__.py": "e3d89d99240d6cf988b753a34cd8da022fa9211030bc1fdac0722d1a5c00a52b",
+    "recsys_research/data.py": "b397d0608e805d3d93e23b191879cd260900af21a19adeb36448caf2df16d9ac",
+    "recsys_research/features.py": "e1801175d377d6f658dc998c926c75d091c15cef8cc539bdbca6743f331816af",
+    "recsys_research/metrics.py": "d6cca5f9f02a82e065d749889fb2a6ead90fc89efa79814c90ab73eb63473390",
+    "recsys_research/run.py": "f1496e19203e04ddea7ae5517971b5c1df6a585a6c7f19252dacf7821601c106"
+  },
+  "supplementary_artifact_hashes": {
+    "runtime_environment.json": {
+      "sha256": "ef903f3a64b6e8d465d3295a051714e46714501d4b3c9a546989ca2a7968605c",
+      "bytes": 2011
+    },
+    "requirements-gpu.lock": {
+      "sha256": "fda911ade7f59d5ef11213da7779b9adc05de10c937e0073bb9cdc6546a06691",
+      "bytes": 1208
+    },
+    "gpu_profile.json": {
+      "sha256": "be3873659a9c7179cfb8ef8e1fcfb4f5e46d692391c467d23647dd33e863ed3a",
+      "bytes": 7198
+    },
+    "registration.json": {
+      "sha256": "f57359792d3481c03ed2d3539122ac8a9a99f7598f63fd94181a97e0fe1c793b",
+      "bytes": 253170
+    },
+    "preparation_lock.json": {
+      "sha256": "5d7c7212225e8119e65e0224cb450d7742428cff6d7a64d2fcadceb214fe6fba",
+      "bytes": 9960
+    },
+    "selection_lock.json": {
+      "sha256": "2f239d771533708ff2b9e18baea1108c235b17e4c17aa86eaee9aec522c436c6",
+      "bytes": 53519
+    },
+    "prediction_lock.json": {
+      "sha256": "b84b773fee5dd147a06dc0f343c1784e987dd1c2f479986afcac0798e77b58b5",
+      "bytes": 217
+    },
+    "test_results.json": {
+      "sha256": "f121b89fac927e99318e980255960f980d2b7c526020777ccbee5e571073a142",
+      "bytes": 16635
+    },
+    "seed_metrics.json": {
+      "sha256": "96ec4b271a044b15579a54b20cd4afc11db99fb44c49a853ec1db752919f2921",
+      "bytes": 74161
+    },
+    "memory_diagnostic.json": {
+      "sha256": "5320a11b41341f94dde0f92b6ae464095f4b73c07449e43420acb86047589c0a",
+      "bytes": 7680
+    },
+    "memory_diagnostic.csv": {
+      "sha256": "59d95c0e874e78cef49a47830105f997dc54cd1aba90d1d1160ac11f4172cb19",
+      "bytes": 1531
+    },
+    "audit.json": {
+      "sha256": "e4a02f07560dcff12a6aca7664e8d18417f6b24e25b0036de4c726b800fe6bc3",
+      "bytes": 25742
+    },
+    "audit_initial.json": {
+      "sha256": "8fb75651f3ce68d5ee52f01cb7967ea2a180dcef1591ec28b5e040a27f972578",
+      "bytes": 24993
+    },
+    "source_snapshot_note.json": {
+      "sha256": "9b64607720ba0dcf802e60e9785a4a528475e15fe94299b5a6218d1f07c3c89c",
+      "bytes": 862
+    },
+    "full_tests.log": {
+      "sha256": "8b4b480f2dee3dfb7e11b64c37b40d2443ac8dcd9544d6ed7f369764364cabb7",
+      "bytes": 261
+    },
+    "REPORT.md": {
+      "sha256": "811b5258e61534d5d815220496cdeede70d6c645aa970f70606ef89943e4b072",
+      "bytes": 43061
+    }
+  },
+  "audit_history": "audit_initial.json, when present, preserves the first audit. The final audit recognizes binary AppleDouble metadata separately when checking unchanged V1 implementation; the complete registered V2 source hash set, including metadata, is still attested. No ML choices changed.",
+  "script_sha256": "ea4cee82efc5bcbe5c2e86220426364436a0a90bf2a4a4f974fd87a997ed736d"
+}

@@ -1,0 +1,107 @@
+# Repeats the frozen procedure on the SAME cohort; not a new confirmation study.
+study: reproduce-fixed-v2
+n_users: 9000
+development_users: 1000
+user_seed: 20261026
+cohort_seed: 371
+exclude_manifest: reports/main/manifest.json
+day_seed: 1701
+raw_dir: data/raw
+processed_dir: data/processed/v2_reproduce
+output_dir: reports/v2/reproduce
+warmup_days: 30
+split_days:
+- 210
+- 240
+- 270
+days_per_user:
+  train: 12
+  tune: 4
+  select: 4
+  test: 8
+embargo_days: 1
+manual_windows:
+- 7
+- 30
+- null
+auto_windows:
+- 2
+- 3
+- 10
+- 14
+- 60
+- 90
+auto_half_lives:
+- 3
+- 10
+- 45
+model_seeds:
+- 17
+- 29
+- 43
+threads: 16
+iterations: 600
+early_stopping: 60
+hyper_grid:
+- depth: 5
+  learning_rate: 0.06
+  l2_leaf_reg: 5
+- depth: 7
+  learning_rate: 0.06
+  l2_leaf_reg: 5
+- depth: 6
+  learning_rate: 0.1
+  l2_leaf_reg: 10
+selection_prefixes:
+- 1
+- 2
+- 4
+- 6
+- 9
+selection_feature_penalty: 1.0e-06
+random_controls: 3
+random_seed: 8821
+bootstrap_samples: 5000
+context_recent: 256
+context_older: 256
+neural_max_epochs: 10
+neural_patience: 2
+neural_batch_groups: 16
+neural_weight_decay: 0.0001
+neural_grid:
+- d_model: 64
+  n_layers: 2
+  n_heads: 4
+  dropout: 0.1
+  learning_rate: 0.0003
+  pairwise_weight: 0.0
+- d_model: 128
+  n_layers: 2
+  n_heads: 4
+  dropout: 0.1
+  learning_rate: 0.0003
+  pairwise_weight: 0.0
+- d_model: 128
+  n_layers: 2
+  n_heads: 4
+  dropout: 0.1
+  learning_rate: 0.0003
+  pairwise_weight: 0.1
+blend_weights:
+- 0.0
+- 0.25
+- 0.5
+- 0.75
+- 1.0
+neural_ablations:
+- pure_history
+- no_event_encoder
+ablation_seeds:
+- 17
+device: auto
+mixed_precision: bf16
+embedding_buckets:
+  item: 131072
+  artist: 32768
+  album: 131072
+  user: 8192

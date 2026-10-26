@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "recsys-temporal-autofe"
+version = "0.1.0"
+description = "Auditable temporal relational feature search on Yambda logged plays"
+requires-python = ">=3.12"
+dependencies = ["numpy", "pandas", "pyarrow", "catboost", "scikit-learn", "scipy", "matplotlib", "pyyaml", "requests"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+history = ["torch>=2.8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

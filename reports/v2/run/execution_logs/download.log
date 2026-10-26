@@ -1,0 +1,36 @@
+RUN ['python', 'scripts/download_data.py']
+multi_event.parquet: 16.8/437.5 MB
+multi_event.parquet: 33.6/437.5 MB
+multi_event.parquet: 50.3/437.5 MB
+multi_event.parquet: 67.1/437.5 MB
+multi_event.parquet: 83.9/437.5 MB
+multi_event.parquet: 100.7/437.5 MB
+multi_event.parquet: 117.4/437.5 MB
+multi_event.parquet: 134.2/437.5 MB
+multi_event.parquet: 151.0/437.5 MB
+multi_event.parquet: 167.8/437.5 MB
+multi_event.parquet: 184.5/437.5 MB
+multi_event.parquet: 201.3/437.5 MB
+multi_event.parquet: 218.1/437.5 MB
+multi_event.parquet: 234.9/437.5 MB
+multi_event.parquet: 251.7/437.5 MB
+multi_event.parquet: 268.4/437.5 MB
+multi_event.parquet: 285.2/437.5 MB
+multi_event.parquet: 302.0/437.5 MB
+multi_event.parquet: 318.8/437.5 MB
+multi_event.parquet: 335.5/437.5 MB
+multi_event.parquet: 352.3/437.5 MB
+multi_event.parquet: 369.1/437.5 MB
+multi_event.parquet: 385.9/437.5 MB
+multi_event.parquet: 402.7/437.5 MB
+multi_event.parquet: 419.4/437.5 MB
+multi_event.parquet: 436.2/437.5 MB
+Downloaded and verified data/raw/multi_event.parquet
+artist_item_mapping.parquet: 16.8/38.3 MB
+artist_item_mapping.parquet: 33.6/38.3 MB
+Downloaded and verified data/raw/artist_item_mapping.parquet
+album_item_mapping.parquet: 16.8/54.5 MB
+album_item_mapping.parquet: 33.6/54.5 MB
+album_item_mapping.parquet: 50.3/54.5 MB
+Downloaded and verified data/raw/album_item_mapping.parquet
+All inputs verified at revision dd6f3a19eef5866e346c3270e098baa641a44948

@@ -1,0 +1,17 @@
+{
+  "seconds": 58.76283449999755,
+  "relations_seconds": {
+    "user": 3.306779042002745,
+    "item": 9.76409324999986,
+    "artist": 6.607650165999075,
+    "album": 10.321480167003756,
+    "user_item": 8.606122958000924,
+    "user_artist": 8.148561916998005,
+    "user_album": 9.025624250003602
+  },
+  "n_features": 224,
+  "n_rows": 232880,
+  "matrix_bytes": 218300649,
+  "embargo_days": 1,
+  "peak_rss_bytes": 1780465664
+}

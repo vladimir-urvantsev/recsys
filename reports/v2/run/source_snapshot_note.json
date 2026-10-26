@@ -1,0 +1,20 @@
+{
+  "purpose": "Exact bytes of all registered source-hash entries",
+  "metadata_note": "macOS tar added AppleDouble ._ files, which are binary filesystem metadata rather than Python implementation. They were included by glob in the remote frozen hash set and are preserved here for exact attestation. Actual Python implementation bytes are unchanged.",
+  "frozen_file_count": 28,
+  "implementation_files": [
+    "recsys_history_v2/__init__.py",
+    "recsys_history_v2/contexts.py",
+    "recsys_history_v2/data.py",
+    "recsys_history_v2/model.py",
+    "recsys_history_v2/run.py",
+    "recsys_history_v2/statistics.py",
+    "recsys_history_v2/tabular.py",
+    "recsys_history_v2/trainer.py",
+    "recsys_research/__init__.py",
+    "recsys_research/data.py",
+    "recsys_research/features.py",
+    "recsys_research/metrics.py",
+    "recsys_research/run.py"
+  ]
+}

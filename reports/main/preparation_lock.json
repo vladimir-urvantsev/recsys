@@ -1,0 +1,88 @@
+{
+  "config": {
+    "n_users": 1000,
+    "user_seed": 2026,
+    "day_seed": 1701,
+    "raw_dir": "data/raw",
+    "processed_dir": "data/processed/main",
+    "output_dir": "reports/main",
+    "warmup_days": 30,
+    "split_days": [
+      210,
+      240,
+      270
+    ],
+    "days_per_user": {
+      "train": 6,
+      "tune": 2,
+      "select": 2,
+      "test": 3
+    },
+    "embargo_days": 1,
+    "manual_windows": [
+      7,
+      30,
+      null
+    ],
+    "auto_windows": [
+      2,
+      3,
+      10,
+      14,
+      60,
+      90
+    ],
+    "auto_half_lives": [
+      3,
+      10,
+      45
+    ],
+    "model_seeds": [
+      17,
+      29,
+      43
+    ],
+    "threads": 4,
+    "iterations": 500,
+    "early_stopping": 50,
+    "hyper_grid": [
+      {
+        "depth": 5,
+        "learning_rate": 0.06,
+        "l2_leaf_reg": 5
+      },
+      {
+        "depth": 7,
+        "learning_rate": 0.06,
+        "l2_leaf_reg": 5
+      },
+      {
+        "depth": 6,
+        "learning_rate": 0.1,
+        "l2_leaf_reg": 10
+      }
+    ],
+    "selection_prefixes": [
+      1,
+      2,
+      4,
+      6,
+      9
+    ],
+    "selection_feature_penalty": 1e-06,
+    "bootstrap_samples": 2000
+  },
+  "config_sha256": "13cd8cd8109e884dcd9276dc1467e12b31693d2c97884a8ad6c4dde46ce8c38d",
+  "sources": {
+    "__init__.py": "e3d89d99240d6cf988b753a34cd8da022fa9211030bc1fdac0722d1a5c00a52b",
+    "data.py": "b397d0608e805d3d93e23b191879cd260900af21a19adeb36448caf2df16d9ac",
+    "features.py": "e1801175d377d6f658dc998c926c75d091c15cef8cc539bdbca6743f331816af",
+    "metrics.py": "d6cca5f9f02a82e065d749889fb2a6ead90fc89efa79814c90ab73eb63473390",
+    "run.py": "f1496e19203e04ddea7ae5517971b5c1df6a585a6c7f19252dacf7821601c106"
+  },
+  "queries_sha256": "34986e19214160234bf909fd386530c6db582bc90ac4d620bd77bb5b723d35e1",
+  "features_sha256": "0390485c473e6786004c8fb525de31e47f1f73c1d4673fbd89e850f4591edd53",
+  "manifest_sha256": "f33d0cd7513caeea6c994fe20c521492f53be45428f199a8aa6928cc0333cfe2",
+  "events_sha256": "e130937254ae54021acd8850db6797bcbd943ba75ebd84312c4b9d7e433b6b0c",
+  "feature_groups_sha256": "2df5fc13f941f37308edd3f25efeb8a3e6d151dd8254f872dac6997a1c0e2b75"
+}

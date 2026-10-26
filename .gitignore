@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+artifacts/*
+!artifacts/.gitkeep
+catboost_info/
+.DS_Store
+*.partial
+reports/debug-*/
+reports/v2/**/tabular/
+reports/v2/**/neural/

@@ -1,0 +1,10 @@
+family,checkpoints,additional_fit_seconds,cuda_peak_bytes,parameters,epochs_or_trees,kind
+manual,3,148.03177565988153,,,257,tabular
+all_auto,3,183.70715399109758,,,296,tabular
+selected_auto,3,153.54246369900648,,,257,tabular
+random_0,3,235.18023524503224,,,257,tabular
+random_1,3,235.53929310792591,,,257,tabular
+random_2,3,236.7685711159138,,,257,tabular
+history_global,3,285.20016166800633,1108896768.0,14094587.0,1,history
+history_pure,1,140.39339176099747,1095588352.0,14089777.0,1,history
+history_no_encoder,1,125.8686175319599,1048867840.0,13961851.0,1,history

@@ -1,0 +1,8 @@
+features user: 108,409 daily keys, 3.3s
+features item: 3,033,700 daily keys, 9.8s
+features artist: 1,300,314 daily keys, 6.6s
+features album: 2,409,117 daily keys, 10.3s
+features user_item: 4,089,964 daily keys, 8.6s
+features user_artist: 3,040,983 daily keys, 8.1s
+features user_album: 3,727,221 daily keys, 9.0s
+Prepared (232880, 224) matrix in 58.8s

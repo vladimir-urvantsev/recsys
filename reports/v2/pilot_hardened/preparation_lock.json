@@ -1,0 +1,202 @@
+{
+  "config_sha256": "11ab5901b8b9020e32229b4525f8e99425ff88cbe96e1c10123892410401f6b6",
+  "sources": {
+    "recsys_history_v2/__init__.py": "0915d766b6f002306fb5d734a204e4a2b4d7c831bbf2dd86de02b0aa80cc24a6",
+    "recsys_history_v2/contexts.py": "b0aa8c739103ab21597e5554edbc7f86602ff2cd3c8bc197be5cc5cd4c8848dd",
+    "recsys_history_v2/data.py": "ccdac1b147b0f19194fd09749f28cf772370c4cecffb546f39c3701256ef06db",
+    "recsys_history_v2/model.py": "c7f63116d2e35c62c0658f545ac7e9bfe111aee59ff73a2592f93265bcab9c9b",
+    "recsys_history_v2/run.py": "8fef5574aa1882cd6bcb59aa86de923c27f706999523557afeac8b6b3dfd3c6c",
+    "recsys_history_v2/statistics.py": "6f9c6d45684d54a1e7b253978d8640bbf24964c593095c34d36f9fe424106718",
+    "recsys_history_v2/tabular.py": "db759c7362c06a190bb0ef0ec49f3f96b35a7b2556beab9e663eb942f0814480",
+    "recsys_history_v2/trainer.py": "d30f72e8c8f55b5e169ba4fc24d9875ca3eec98baf4c65d557862f705a28a7ee",
+    "recsys_research/__init__.py": "e3d89d99240d6cf988b753a34cd8da022fa9211030bc1fdac0722d1a5c00a52b",
+    "recsys_research/data.py": "b397d0608e805d3d93e23b191879cd260900af21a19adeb36448caf2df16d9ac",
+    "recsys_research/features.py": "e1801175d377d6f658dc998c926c75d091c15cef8cc539bdbca6743f331816af",
+    "recsys_research/metrics.py": "d6cca5f9f02a82e065d749889fb2a6ead90fc89efa79814c90ab73eb63473390",
+    "recsys_research/run.py": "f1496e19203e04ddea7ae5517971b5c1df6a585a6c7f19252dacf7821601c106"
+  },
+  "artifacts": {
+    "sample_events.parquet": "bb881167da2c040db80f7b7abea295bae38e6595e671f86493907849d834c928",
+    "queries.parquet": "7e601080308c7370fa7544675fb7a047216c6a6cc9178cd3d9168ff4ac537b51",
+    "test_labels.parquet": "b1da17ae7dd43863ea89b4bcc41130db42171c7e7adc4064e88674dc1e448698",
+    "features.parquet": "8d0ebf885bd4d499fd8092b201d435f5ca1f7bd9f2b8ebba04ddd60cf5ddfbfc",
+    "feature_groups.json": "f144833c012f05510711af81fdbea13ac348f218ef4f41225084acf16efd6c3d",
+    "manifest.json": "21c754d4c8156515f02844074b3049a0a9dccefc636f9261807b253129ac22f8",
+    "global_features.npy": "dc7ba284a58553cb10b266ba0f65a675a78fad956f190ef8aa6eb518efa8af67",
+    "global_normalizer.json": "9c4d580030bcc44ef5efd67f55e7da6f667019aa572fd758fe80521ae4d3cd65",
+    "contexts/group_id.npy": "0a193eea7bb148f5f8808fe0d98bb81a2d6389000449b77cdb699ef0379dba9e",
+    "contexts/group_uid.npy": "3a39e0ad6b6014a20d98f00b38111638ffac797b5ec72adb3abfd576beaf606d",
+    "contexts/query_group.npy": "f7c9c52f5654f58c9c40fc5d4d555625295277450ba11300f0ef7e9c724b8020",
+    "contexts/group_available_count.npy": "aa0ed2ee370fe1cbe4273bbb246515a7ea54d264ecf7bbad3d52adf7e6175359",
+    "contexts/history_ratio.npy": "cf0d201ff08c18a785392baf41ceaf8e85adaba72525037fc3ca887f528ff942",
+    "contexts/history_ids.npy": "6aa808ac4f8cac9d8bd73469880889837b3d5c3d7dae67bb555807ee68162ec0",
+    "contexts/history_type.npy": "4ef78b299edd9486a02ce030a22d61ff742eff6694b4e88477335987cccce9f4",
+    "contexts/history_age.npy": "d5debe52cf25ea3ba7f97e54d2d65632abaf2d8873da8a2353069ab78dbb6018",
+    "contexts/group_retained_count.npy": "1af9dbff89f1714ec9d6ed68984fab53bd2ba2a858e33bf25a7a1a0604b64d02",
+    "contexts/history_organic.npy": "4b1ea6a0f60b9b4a16551825d2849877863b0385914669762a37368ffb437494",
+    "contexts/group_day.npy": "c35379d00fca32d2e1a6811153411a1bf3e342421a550a0b63be741ba7310774",
+    "contexts/history_mask.npy": "b03944f3ffad87ec7da6ea281dc4befce132c733e4d4b1c1b359f5ad2b4e6c22"
+  },
+  "registration_sha256": "4874438038d9976114894079c7cb9ffa98a79661abf170246b2b2cafeeb09030",
+  "seconds": 5.441841416992247,
+  "context_summary": {
+    "groups": 153,
+    "queries": 3763,
+    "context_length": 16,
+    "recent_capacity": 8,
+    "older_capacity": 8,
+    "embargo_days": 1,
+    "query_identity_sha256": "87efb8ac160f472d27f126a93f37867dd677fc88ed5a74d77bb32c9607c81f5d",
+    "contexts_module_sha256": "b0aa8c739103ab21597e5554edbc7f86602ff2cd3c8bc197be5cc5cd4c8848dd",
+    "event_type_mapping": {
+      "listen": 1,
+      "like": 2,
+      "dislike": 3,
+      "unlike": 4,
+      "undislike": 5
+    },
+    "pad_id": -2,
+    "missing_id": -1,
+    "empty_groups": 7,
+    "available_events_quantiles": {
+      "0": 0.0,
+      "0.1": 80.60000000000001,
+      "0.5": 1356.0,
+      "0.9": 6064.600000000001,
+      "1": 14106.0
+    },
+    "retained_events_quantiles": {
+      "0": 0.0,
+      "0.1": 16.0,
+      "0.5": 16.0,
+      "0.9": 16.0,
+      "1": 16.0
+    },
+    "coverage_nonempty_quantiles": {
+      "0": 0.0011342691053452432,
+      "0.1": 0.0025816734809777525,
+      "0.5": 0.011380008093889114,
+      "0.9": 0.11765341984320087,
+      "1": 1.0
+    },
+    "total_available_token_occurrences": 343842,
+    "total_retained_token_occurrences": 2294,
+    "query_labels_accessed": false,
+    "rules": {
+      "eligibility": "available_day < query.day - embargo_days",
+      "event_order": "original timestamp, then source_order, within user",
+      "selection": "most recent R eligible events, plus up to O evenly spaced older chronological indices; no duplication",
+      "padding": "left pad; True mask marks real tokens; raw missing metadata -1, padding -2",
+      "age": "log1p((cutoff_day*86400-original_timestamp)/86400)",
+      "sharing": "one context per user-day group, reused for all candidate queries",
+      "information_limit": "complete histories stay in archive; neural input is a bounded compression, while AutoFE can aggregate the full eligible history",
+      "sealing_limit": "earlier confirmation outcomes can enter later histories after availability/embargo, as declared rolling evaluation"
+    },
+    "artifacts": {
+      "history_ids.npy": {
+        "shape": [
+          153,
+          16,
+          3
+        ],
+        "dtype": "int32",
+        "bytes": 29504,
+        "sha256": "6aa808ac4f8cac9d8bd73469880889837b3d5c3d7dae67bb555807ee68162ec0"
+      },
+      "history_type.npy": {
+        "shape": [
+          153,
+          16
+        ],
+        "dtype": "uint8",
+        "bytes": 2576,
+        "sha256": "4ef78b299edd9486a02ce030a22d61ff742eff6694b4e88477335987cccce9f4"
+      },
+      "history_ratio.npy": {
+        "shape": [
+          153,
+          16
+        ],
+        "dtype": "int16",
+        "bytes": 5024,
+        "sha256": "cf0d201ff08c18a785392baf41ceaf8e85adaba72525037fc3ca887f528ff942"
+      },
+      "history_organic.npy": {
+        "shape": [
+          153,
+          16
+        ],
+        "dtype": "uint8",
+        "bytes": 2576,
+        "sha256": "4b1ea6a0f60b9b4a16551825d2849877863b0385914669762a37368ffb437494"
+      },
+      "history_age.npy": {
+        "shape": [
+          153,
+          16
+        ],
+        "dtype": "float32",
+        "bytes": 9920,
+        "sha256": "d5debe52cf25ea3ba7f97e54d2d65632abaf2d8873da8a2353069ab78dbb6018"
+      },
+      "history_mask.npy": {
+        "shape": [
+          153,
+          16
+        ],
+        "dtype": "bool",
+        "bytes": 2576,
+        "sha256": "b03944f3ffad87ec7da6ea281dc4befce132c733e4d4b1c1b359f5ad2b4e6c22"
+      },
+      "query_group.npy": {
+        "shape": [
+          3763
+        ],
+        "dtype": "int64",
+        "bytes": 30232,
+        "sha256": "f7c9c52f5654f58c9c40fc5d4d555625295277450ba11300f0ef7e9c724b8020"
+      },
+      "group_uid.npy": {
+        "shape": [
+          153
+        ],
+        "dtype": "int64",
+        "bytes": 1352,
+        "sha256": "3a39e0ad6b6014a20d98f00b38111638ffac797b5ec72adb3abfd576beaf606d"
+      },
+      "group_day.npy": {
+        "shape": [
+          153
+        ],
+        "dtype": "int32",
+        "bytes": 740,
+        "sha256": "c35379d00fca32d2e1a6811153411a1bf3e342421a550a0b63be741ba7310774"
+      },
+      "group_id.npy": {
+        "shape": [
+          153
+        ],
+        "dtype": "uint64",
+        "bytes": 1352,
+        "sha256": "0a193eea7bb148f5f8808fe0d98bb81a2d6389000449b77cdb699ef0379dba9e"
+      },
+      "group_available_count.npy": {
+        "shape": [
+          153
+        ],
+        "dtype": "uint32",
+        "bytes": 740,
+        "sha256": "aa0ed2ee370fe1cbe4273bbb246515a7ea54d264ecf7bbad3d52adf7e6175359"
+      },
+      "group_retained_count.npy": {
+        "shape": [
+          153
+        ],
+        "dtype": "uint32",
+        "bytes": 740,
+        "sha256": "1af9dbff89f1714ec9d6ed68984fab53bd2ba2a858e33bf25a7a1a0604b64d02"
+      }
+    },
+    "elapsed_seconds": 0.1136061669967603
+  }
+}

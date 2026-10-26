@@ -1,0 +1,97 @@
+{
+  "status": "complete",
+  "server_full_tests_passed": 158,
+  "final_report_tests_passed": 11,
+  "server_audit_counts": {
+    "passed": 91,
+    "skipped": 0,
+    "failed": 0
+  },
+  "all_final_models_transferred_and_stream_verified": 23,
+  "model_archive": {
+    "archive": "v2_frozen_models.tar.gz",
+    "sha256": "e3a537481719733c7d0e6bceccb8a15958094b91bde6ba4d71d0e762359c05bf",
+    "bytes": 330278825,
+    "frozen_model_count": 23,
+    "selection_sha256": "2f239d771533708ff2b9e18baea1108c235b17e4c17aa86eaee9aec522c436c6"
+  },
+  "joined_and_blind_predictions_transferred_sha_verified": true,
+  "local_and_remote_implementation_bytes_identical": 12,
+  "full_frozen_source_entries_verified": 28,
+  "source_metadata_entries": 15,
+  "primary_comparison": {
+    "resampling_unit": "user (all rows and user-day groups retained together)",
+    "delta_definition": "proposed minus baseline",
+    "interval_method": "paired user-cluster percentile bootstrap, 95%",
+    "bootstrap_fraction_note": "Descriptive fraction of resamples improving; not a p-value or posterior probability.",
+    "n_users": 6323,
+    "n_mixed_users": 5712,
+    "n_boot": 5000,
+    "seed": 20261026,
+    "logloss": {
+      "delta": -0.022794274956798685,
+      "ci95": [
+        -0.027199084517142248,
+        -0.0187771490327193
+      ],
+      "bootstrap_fraction_improved": 1.0,
+      "n_valid": 5000
+    },
+    "user_macro_ndcg_mixed": {
+      "delta": -0.02287674294492618,
+      "ci95": [
+        -0.025061520055646755,
+        -0.020717565393323673
+      ],
+      "bootstrap_fraction_improved": 0.0,
+      "n_valid": 5000
+    }
+  },
+  "original_v1_weights_preserved": "artifacts/v1_frozen_models.tar.gz",
+  "scientific_model_changes_after_label_release": 0,
+  "note": "Scientific inference remains conditional on the observed cohort/month. Local public/prepared caches and temporary venv were removed to retain all results/weights within disk limits; exact dependency locks and pinned data download are supplied.",
+  "local_recheck": {
+    "log": "reports/v2/run/recheck.log",
+    "log_sha256": "cb9914be0787ef0bcfdefe72c23d73d4525547099156348a8cda1154bd1e17f2",
+    "unit_tests_passed": 160,
+    "raw_source_files_checksum_verified": 3,
+    "v2_raw_events_matched": 42906083,
+    "v2_raw_test_keys_and_labels_matched": 1110396,
+    "independent_logloss_and_roc_auc_families": 10,
+    "independent_ndcg_primary_families": 2,
+    "audit_counts": {
+      "v1": {
+        "passed": 21,
+        "skipped": 0,
+        "failed": 0
+      },
+      "v2": {
+        "passed": 63,
+        "skipped": 28,
+        "failed": 0
+      },
+      "smoke": {
+        "passed": 77,
+        "skipped": 0,
+        "failed": 0
+      }
+    },
+    "v2_main_local_audit_skip_scope": "Full prepared tables and contexts absent from the compact local delivery. Archived A100 audit covers original full data and GPU replay.",
+    "v1_data_and_feature_hashes_reproduced": true,
+    "v2_catboost_models_deserialized": 18,
+    "v2_torch_checkpoint_states_checked": 5,
+    "v2_live_hashed_source_updated_since_original": [
+      "recsys_history_v2/run.py"
+    ],
+    "scientific_model_changes_after_label_release": 0
+  },
+  "submission_document": "README.md",
+  "historical_pdf_export": {
+    "pdf_pages": 7,
+    "pdf_pages_visually_reviewed": 7,
+    "pdf_sha256": "8e0d920a715f75f82583eb1a7bfe8f93697fa4ba964e93ad2e17a3fff14ef5c3",
+    "original_pdf_sha256": "26be55154eb520c4a40a7ac1006d265703ed29a14277395581d729eb6c105e2e",
+    "new_pdf_input_hashes_verified": 18,
+    "removed_from_delivery": true
+  }
+}

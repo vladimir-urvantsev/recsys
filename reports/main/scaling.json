@@ -1,0 +1,42 @@
+{
+  "note": "Sequential fresh processes, nested uniform user samples from main cohort; full histories retained; no labels used for decisions. Timings include feature engine but exclude file loading, reported separately. These measurements do not establish billion-event scale.",
+  "platform": "macOS-15.0.1-arm64-arm-64bit",
+  "rows": [
+    {
+      "users": 100,
+      "history_events": 461314,
+      "query_rows": 24803,
+      "feature_seconds": 3.8291405830022995,
+      "load_seconds": 0.3193606249988079,
+      "matrix_bytes": 23249786,
+      "features": 224,
+      "peak_rss_bytes": 778584064,
+      "rows_per_second": 6477.432588947363,
+      "events_per_second": 120474.55297091739
+    },
+    {
+      "users": 300,
+      "history_events": 1455404,
+      "query_rows": 69918,
+      "feature_seconds": 13.628617125003075,
+      "load_seconds": 0.15631362499698298,
+      "matrix_bytes": 65538786,
+      "features": 224,
+      "peak_rss_bytes": 1136721920,
+      "rows_per_second": 5130.234370714573,
+      "events_per_second": 106790.29182864887
+    },
+    {
+      "users": 1000,
+      "history_events": 4884366,
+      "query_rows": 232880,
+      "feature_seconds": 57.496358374999545,
+      "load_seconds": 0.27240758399420884,
+      "matrix_bytes": 218300649,
+      "features": 224,
+      "peak_rss_bytes": 1727954944,
+      "rows_per_second": 4050.343475340178,
+      "events_per_second": 84950.87581275079
+    }
+  ]
+}

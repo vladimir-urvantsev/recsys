@@ -1,0 +1,24 @@
+n_users: 1000
+user_seed: 2026
+day_seed: 1701
+raw_dir: data/raw
+processed_dir: data/processed/main
+output_dir: reports/main
+warmup_days: 30
+split_days: [210, 240, 270]
+days_per_user: {train: 6, tune: 2, select: 2, test: 3}
+embargo_days: 1
+manual_windows: [7, 30, null]
+auto_windows: [2, 3, 10, 14, 60, 90]
+auto_half_lives: [3, 10, 45]
+model_seeds: [17, 29, 43]
+threads: 4
+iterations: 500
+early_stopping: 50
+hyper_grid:
+  - {depth: 5, learning_rate: 0.06, l2_leaf_reg: 5}
+  - {depth: 7, learning_rate: 0.06, l2_leaf_reg: 5}
+  - {depth: 6, learning_rate: 0.10, l2_leaf_reg: 10}
+selection_prefixes: [1, 2, 4, 6, 9]
+selection_feature_penalty: 0.000001
+bootstrap_samples: 2000

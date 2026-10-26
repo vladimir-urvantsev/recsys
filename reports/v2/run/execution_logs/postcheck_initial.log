@@ -1,0 +1,3 @@
+RUN ['bash', '-c', '.venv/bin/python -m pytest -q > reports/v2/run/full_tests.log 2>&1']
+RUN ['.venv/bin/python', '-u', '-m', 'recsys_history_v2.run', '--config', 'configs/v2.yaml', '--phase', 'report']
+/workspace/recsys-v2/.venv/bin/python: Error while finding module specification for 'recsys_history_v2.run' (ModuleNotFoundError: No module named 'recsys_history_v2')

@@ -1,0 +1,1028 @@
+{
+  "passed": true,
+  "complete": true,
+  "fit_calls": 0,
+  "refit_calls": 0,
+  "feature_selection_calls": 0,
+  "absolute_numeric_tolerance": 1e-10,
+  "cpu_prediction_tolerance": 2e-06,
+  "gpu_prediction_tolerance": 1e-06,
+  "max_reload_rows": 128,
+  "gpu_replay_batch_policy": "Compute the entire original first test batch with original group count, history length and all candidates; compare at most max_reload_rows genuine rows.",
+  "audit_script_sha256": "e79c3f4167470eb29d4a57eab62542b1546a010918abd665fa25c3161068894d",
+  "config": {
+    "study": "fresh-users-history-v2",
+    "n_users": 9000,
+    "development_users": 1000,
+    "user_seed": 20261026,
+    "cohort_seed": 371,
+    "exclude_manifest": "reports/main/manifest.json",
+    "day_seed": 1701,
+    "raw_dir": "data/raw",
+    "processed_dir": "data/processed/v2",
+    "output_dir": "reports/v2/run",
+    "warmup_days": 30,
+    "split_days": [
+      210,
+      240,
+      270
+    ],
+    "days_per_user": {
+      "train": 12,
+      "tune": 4,
+      "select": 4,
+      "test": 8
+    },
+    "embargo_days": 1,
+    "manual_windows": [
+      7,
+      30,
+      null
+    ],
+    "auto_windows": [
+      2,
+      3,
+      10,
+      14,
+      60,
+      90
+    ],
+    "auto_half_lives": [
+      3,
+      10,
+      45
+    ],
+    "model_seeds": [
+      17,
+      29,
+      43
+    ],
+    "threads": 16,
+    "iterations": 600,
+    "early_stopping": 60,
+    "hyper_grid": [
+      {
+        "depth": 5,
+        "learning_rate": 0.06,
+        "l2_leaf_reg": 5
+      },
+      {
+        "depth": 7,
+        "learning_rate": 0.06,
+        "l2_leaf_reg": 5
+      },
+      {
+        "depth": 6,
+        "learning_rate": 0.1,
+        "l2_leaf_reg": 10
+      }
+    ],
+    "selection_prefixes": [
+      1,
+      2,
+      4,
+      6,
+      9
+    ],
+    "selection_feature_penalty": 1e-06,
+    "random_controls": 3,
+    "random_seed": 8821,
+    "bootstrap_samples": 5000,
+    "context_recent": 256,
+    "context_older": 256,
+    "neural_max_epochs": 10,
+    "neural_patience": 2,
+    "neural_batch_groups": 16,
+    "neural_weight_decay": 0.0001,
+    "neural_grid": [
+      {
+        "d_model": 64,
+        "n_layers": 2,
+        "n_heads": 4,
+        "dropout": 0.1,
+        "learning_rate": 0.0003,
+        "pairwise_weight": 0.0
+      },
+      {
+        "d_model": 128,
+        "n_layers": 2,
+        "n_heads": 4,
+        "dropout": 0.1,
+        "learning_rate": 0.0003,
+        "pairwise_weight": 0.0
+      },
+      {
+        "d_model": 128,
+        "n_layers": 2,
+        "n_heads": 4,
+        "dropout": 0.1,
+        "learning_rate": 0.0003,
+        "pairwise_weight": 0.1
+      }
+    ],
+    "blend_weights": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "neural_ablations": [
+      "pure_history",
+      "no_event_encoder"
+    ],
+    "ablation_seeds": [
+      17
+    ],
+    "device": "auto",
+    "mixed_precision": "bf16",
+    "embedding_buckets": {
+      "item": 131072,
+      "artist": 32768,
+      "album": 131072,
+      "user": 8192
+    }
+  },
+  "counts": {
+    "passed": 91,
+    "skipped": 0,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "name": "required_final_artifacts",
+      "status": "passed",
+      "details": {
+        "rows": 1110396,
+        "families": [
+          "manual",
+          "all_auto",
+          "selected_auto",
+          "random_0",
+          "random_1",
+          "random_2",
+          "history_global",
+          "history_pure",
+          "history_no_encoder",
+          "hybrid"
+        ],
+        "technical_pilot": false
+      }
+    },
+    {
+      "name": "registration_to_final_hash_chain",
+      "status": "passed",
+      "details": {
+        "chain": "registration -> preparation -> selection -> blind probabilities -> joined final results",
+        "confirmation_targets_used_for_selection": 0,
+        "sealing_note": "These are auditable procedural guards, not cryptographic proof that source outcomes were unavailable."
+      }
+    },
+    {
+      "name": "frozen_execution_source_attestation",
+      "status": "passed",
+      "details": {
+        "source_files": 28,
+        "both_namespaces_checked": true,
+        "verification_basis": "current_source",
+        "live_source_matches": true,
+        "report_modules_excluded": true
+      }
+    },
+    {
+      "name": "v1_original_experiment_source_preserved",
+      "status": "passed",
+      "details": {
+        "files_compared_to_v1": 5,
+        "appledouble_metadata": {
+          ".___init__.py": "1b4bb2d1d31dbfe196d8920fd17559502e90ccce36ba684fc5705e9fd67b5787",
+          "._data.py": "1b4bb2d1d31dbfe196d8920fd17559502e90ccce36ba684fc5705e9fd67b5787",
+          "._features.py": "1b4bb2d1d31dbfe196d8920fd17559502e90ccce36ba684fc5705e9fd67b5787",
+          "._metrics.py": "1b4bb2d1d31dbfe196d8920fd17559502e90ccce36ba684fc5705e9fd67b5787",
+          "._report.py": "1b4bb2d1d31dbfe196d8920fd17559502e90ccce36ba684fc5705e9fd67b5787",
+          "._run.py": "1b4bb2d1d31dbfe196d8920fd17559502e90ccce36ba684fc5705e9fd67b5787"
+        },
+        "metadata_note": "Recognized binary filesystem metadata is separate from Python implementation; all V2-registered file hashes remain checked by source attestation."
+      }
+    },
+    {
+      "name": "registered_cohort_separation_and_test_period",
+      "status": "passed",
+      "details": {
+        "sampled_users": 9000,
+        "development_users": 1000,
+        "confirmation_users": 8000,
+        "evaluated_users": 6323,
+        "confirmation_days": [
+          270,
+          301
+        ],
+        "development_confirmation_overlap": 0
+      }
+    },
+    {
+      "name": "fresh_users_exclude_prior_experiments",
+      "status": "passed",
+      "details": {
+        "excluded_users": 1000,
+        "old_v1_users_checked": 1000,
+        "overlap": 0
+      }
+    },
+    {
+      "name": "raw_uid_sampling_reproduces_registered_cohort",
+      "status": "passed",
+      "details": {
+        "raw_source_users": 10000,
+        "uniform_cohort_reproduced_from_uid_column_only": true
+      }
+    },
+    {
+      "name": "prepared_hash:sample_events.parquet",
+      "status": "passed",
+      "details": {
+        "file": "sample_events.parquet",
+        "bytes": 693448419
+      }
+    },
+    {
+      "name": "prepared_hash:queries.parquet",
+      "status": "passed",
+      "details": {
+        "file": "queries.parquet",
+        "bytes": 31787775
+      }
+    },
+    {
+      "name": "prepared_hash:test_labels.parquet",
+      "status": "passed",
+      "details": {
+        "file": "test_labels.parquet",
+        "bytes": 3582459
+      }
+    },
+    {
+      "name": "prepared_hash:features.parquet",
+      "status": "passed",
+      "details": {
+        "file": "features.parquet",
+        "bytes": 1121786751
+      }
+    },
+    {
+      "name": "prepared_hash:feature_groups.json",
+      "status": "passed",
+      "details": {
+        "file": "feature_groups.json",
+        "bytes": 6216
+      }
+    },
+    {
+      "name": "prepared_hash:manifest.json",
+      "status": "passed",
+      "details": {
+        "file": "manifest.json",
+        "bytes": 399157
+      }
+    },
+    {
+      "name": "prepared_hash:global_features.npy",
+      "status": "passed",
+      "details": {
+        "file": "global_features.npy",
+        "bytes": 449879872
+      }
+    },
+    {
+      "name": "prepared_hash:global_normalizer.json",
+      "status": "passed",
+      "details": {
+        "file": "global_normalizer.json",
+        "bytes": 2809
+      }
+    },
+    {
+      "name": "prepared_hash:contexts/history_ids.npy",
+      "status": "passed",
+      "details": {
+        "file": "contexts/history_ids.npy",
+        "bytes": 671926400
+      }
+    },
+    {
+      "name": "prepared_hash:contexts/history_type.npy",
+      "status": "passed",
+      "details": {
+        "file": "contexts/history_type.npy",
+        "bytes": 55993984
+      }
+    },
+    {
+      "name": "prepared_hash:contexts/history_ratio.npy",
+      "status": "passed",
+      "details": {
+        "file": "contexts/history_ratio.npy",
+        "bytes": 111987840
+      }
+    },
+    {
+      "name": "prepared_hash:contexts/history_organic.npy",
+      "status": "passed",
+      "details": {
+        "file": "contexts/history_organic.npy",
+        "bytes": 55993984
+      }
+    },
+    {
+      "name": "prepared_hash:contexts/history_age.npy",
+      "status": "passed",
+      "details": {
+        "file": "contexts/history_age.npy",
+        "bytes": 223975552
+      }
+    },
+    {
+      "name": "prepared_hash:contexts/history_mask.npy",
+      "status": "passed",
+      "details": {
+        "file": "contexts/history_mask.npy",
+        "bytes": 55993984
+      }
+    },
+    {
+      "name": "prepared_hash:contexts/query_group.npy",
+      "status": "passed",
+      "details": {
+        "file": "contexts/query_group.npy",
+        "bytes": 24317952
+      }
+    },
+    {
+      "name": "prepared_hash:contexts/group_uid.npy",
+      "status": "passed",
+      "details": {
+        "file": "contexts/group_uid.npy",
+        "bytes": 875032
+      }
+    },
+    {
+      "name": "prepared_hash:contexts/group_day.npy",
+      "status": "passed",
+      "details": {
+        "file": "contexts/group_day.npy",
+        "bytes": 437580
+      }
+    },
+    {
+      "name": "prepared_hash:contexts/group_id.npy",
+      "status": "passed",
+      "details": {
+        "file": "contexts/group_id.npy",
+        "bytes": 875032
+      }
+    },
+    {
+      "name": "prepared_hash:contexts/group_available_count.npy",
+      "status": "passed",
+      "details": {
+        "file": "contexts/group_available_count.npy",
+        "bytes": 437580
+      }
+    },
+    {
+      "name": "prepared_hash:contexts/group_retained_count.npy",
+      "status": "passed",
+      "details": {
+        "file": "contexts/group_retained_count.npy",
+        "bytes": 437580
+      }
+    },
+    {
+      "name": "blind_probabilities_unchanged_after_outcome_join",
+      "status": "passed",
+      "details": {
+        "all_blind_probabilities_unchanged_after_label_join": true,
+        "rows": 1110396
+      }
+    },
+    {
+      "name": "stored_query_label_seal_alignment_and_cohorts",
+      "status": "passed",
+      "details": {
+        "sealed_confirmation_rows": 1110396,
+        "aligned_rows": 1110396,
+        "evaluated_users_with_early_training_queries": 5127,
+        "evaluated_users": 6323,
+        "warm_user_scope_not_a_guarantee_every_user_has_supervised_training_rows": true
+      }
+    },
+    {
+      "name": "separately_stored_outcomes_match_final_join",
+      "status": "passed",
+      "details": {
+        "separate_labels_join_matches": true,
+        "rows": 1110396
+      }
+    },
+    {
+      "name": "saved_metric_recomputation:manual",
+      "status": "passed",
+      "details": {
+        "metrics_compared": 22,
+        "rows": 1110396
+      }
+    },
+    {
+      "name": "saved_metric_recomputation:all_auto",
+      "status": "passed",
+      "details": {
+        "metrics_compared": 22,
+        "rows": 1110396
+      }
+    },
+    {
+      "name": "saved_metric_recomputation:selected_auto",
+      "status": "passed",
+      "details": {
+        "metrics_compared": 22,
+        "rows": 1110396
+      }
+    },
+    {
+      "name": "saved_metric_recomputation:random_0",
+      "status": "passed",
+      "details": {
+        "metrics_compared": 22,
+        "rows": 1110396
+      }
+    },
+    {
+      "name": "saved_metric_recomputation:random_1",
+      "status": "passed",
+      "details": {
+        "metrics_compared": 22,
+        "rows": 1110396
+      }
+    },
+    {
+      "name": "saved_metric_recomputation:random_2",
+      "status": "passed",
+      "details": {
+        "metrics_compared": 22,
+        "rows": 1110396
+      }
+    },
+    {
+      "name": "saved_metric_recomputation:history_global",
+      "status": "passed",
+      "details": {
+        "metrics_compared": 22,
+        "rows": 1110396
+      }
+    },
+    {
+      "name": "saved_metric_recomputation:history_pure",
+      "status": "passed",
+      "details": {
+        "metrics_compared": 22,
+        "rows": 1110396
+      }
+    },
+    {
+      "name": "saved_metric_recomputation:history_no_encoder",
+      "status": "passed",
+      "details": {
+        "metrics_compared": 22,
+        "rows": 1110396
+      }
+    },
+    {
+      "name": "saved_metric_recomputation:hybrid",
+      "status": "passed",
+      "details": {
+        "metrics_compared": 22,
+        "rows": 1110396
+      }
+    },
+    {
+      "name": "primary_paired_user_bootstrap_recomputed",
+      "status": "passed",
+      "details": {
+        "resampling_unit": "user",
+        "seed": 20261026,
+        "n_boot": 5000,
+        "baseline": "selected_auto",
+        "proposed": "history_global",
+        "conditional_on_observed_month": true
+      }
+    },
+    {
+      "name": "secondary_paired_user_bootstrap_recomputed:selected_auto",
+      "status": "passed",
+      "details": {
+        "baseline": "manual",
+        "proposed": "selected_auto",
+        "seed": 20261026
+      }
+    },
+    {
+      "name": "secondary_paired_user_bootstrap_recomputed:all_auto",
+      "status": "passed",
+      "details": {
+        "baseline": "manual",
+        "proposed": "all_auto",
+        "seed": 20261026
+      }
+    },
+    {
+      "name": "secondary_paired_user_bootstrap_recomputed:hybrid",
+      "status": "passed",
+      "details": {
+        "baseline": "manual",
+        "proposed": "hybrid",
+        "seed": 20261026
+      }
+    },
+    {
+      "name": "secondary_temporal_sensitivity_recomputed",
+      "status": "passed",
+      "details": {
+        "secondary_circular_day_blocks": [
+          3,
+          7
+        ],
+        "seed": 20261026,
+        "not_joint_user_time_inference": true
+      }
+    },
+    {
+      "name": "independent_sklearn_tie_aware_ndcg",
+      "status": "passed",
+      "details": {
+        "mixed_groups": 20,
+        "families": 10,
+        "comparisons": 200,
+        "api": "sklearn.metrics.ndcg_score(ignore_ties=False,k=10)",
+        "max_absolute_error": 4.440892098500626e-16
+      }
+    },
+    {
+      "name": "frozen_hybrid_composition",
+      "status": "passed",
+      "details": {
+        "auto_weight_chosen_before_confirmation": 0.25,
+        "logit_blend_verified": true
+      }
+    },
+    {
+      "name": "model_specification_hash_coverage:manual",
+      "status": "passed",
+      "details": {
+        "checkpoints": 3,
+        "exact_hash_coverage": true
+      }
+    },
+    {
+      "name": "model_hash:manual:manual_17.cbm",
+      "status": "passed",
+      "details": {
+        "bytes": 17266220
+      }
+    },
+    {
+      "name": "model_hash:manual:manual_29.cbm",
+      "status": "passed",
+      "details": {
+        "bytes": 9530132
+      }
+    },
+    {
+      "name": "model_hash:manual:manual_43.cbm",
+      "status": "passed",
+      "details": {
+        "bytes": 13715972
+      }
+    },
+    {
+      "name": "model_reload:manual",
+      "status": "passed",
+      "details": {
+        "checkpoints": 3,
+        "rows": 128,
+        "max_absolute_error": 0.0,
+        "fit_calls": 0
+      }
+    },
+    {
+      "name": "model_specification_hash_coverage:all_auto",
+      "status": "passed",
+      "details": {
+        "checkpoints": 3,
+        "exact_hash_coverage": true
+      }
+    },
+    {
+      "name": "model_hash:all_auto:all_auto_17.cbm",
+      "status": "passed",
+      "details": {
+        "bytes": 17052780
+      }
+    },
+    {
+      "name": "model_hash:all_auto:all_auto_29.cbm",
+      "status": "passed",
+      "details": {
+        "bytes": 17038828
+      }
+    },
+    {
+      "name": "model_hash:all_auto:all_auto_43.cbm",
+      "status": "passed",
+      "details": {
+        "bytes": 9315428
+      }
+    },
+    {
+      "name": "model_reload:all_auto",
+      "status": "passed",
+      "details": {
+        "checkpoints": 3,
+        "rows": 128,
+        "max_absolute_error": 0.0,
+        "fit_calls": 0
+      }
+    },
+    {
+      "name": "model_specification_hash_coverage:selected_auto",
+      "status": "passed",
+      "details": {
+        "checkpoints": 3,
+        "exact_hash_coverage": true
+      }
+    },
+    {
+      "name": "model_hash:selected_auto:selected_auto_17.cbm",
+      "status": "passed",
+      "details": {
+        "bytes": 13717676
+      }
+    },
+    {
+      "name": "model_hash:selected_auto:selected_auto_29.cbm",
+      "status": "passed",
+      "details": {
+        "bytes": 5994084
+      }
+    },
+    {
+      "name": "model_hash:selected_auto:selected_auto_43.cbm",
+      "status": "passed",
+      "details": {
+        "bytes": 5994132
+      }
+    },
+    {
+      "name": "model_reload:selected_auto",
+      "status": "passed",
+      "details": {
+        "checkpoints": 3,
+        "rows": 128,
+        "max_absolute_error": 0.0,
+        "fit_calls": 0
+      }
+    },
+    {
+      "name": "model_specification_hash_coverage:random_0",
+      "status": "passed",
+      "details": {
+        "checkpoints": 3,
+        "exact_hash_coverage": true
+      }
+    },
+    {
+      "name": "model_hash:random_0:random_0_17.cbm",
+      "status": "passed",
+      "details": {
+        "bytes": 5994116
+      }
+    },
+    {
+      "name": "model_hash:random_0:random_0_29.cbm",
+      "status": "passed",
+      "details": {
+        "bytes": 13717628
+      }
+    },
+    {
+      "name": "model_hash:random_0:random_0_43.cbm",
+      "status": "passed",
+      "details": {
+        "bytes": 5994116
+      }
+    },
+    {
+      "name": "model_reload:random_0",
+      "status": "passed",
+      "details": {
+        "checkpoints": 3,
+        "rows": 128,
+        "max_absolute_error": 0.0,
+        "fit_calls": 0
+      }
+    },
+    {
+      "name": "model_specification_hash_coverage:random_1",
+      "status": "passed",
+      "details": {
+        "checkpoints": 3,
+        "exact_hash_coverage": true
+      }
+    },
+    {
+      "name": "model_hash:random_1:random_1_17.cbm",
+      "status": "passed",
+      "details": {
+        "bytes": 13717524
+      }
+    },
+    {
+      "name": "model_hash:random_1:random_1_29.cbm",
+      "status": "passed",
+      "details": {
+        "bytes": 13717556
+      }
+    },
+    {
+      "name": "model_hash:random_1:random_1_43.cbm",
+      "status": "passed",
+      "details": {
+        "bytes": 13001588
+      }
+    },
+    {
+      "name": "model_reload:random_1",
+      "status": "passed",
+      "details": {
+        "checkpoints": 3,
+        "rows": 128,
+        "max_absolute_error": 0.0,
+        "fit_calls": 0
+      }
+    },
+    {
+      "name": "model_specification_hash_coverage:random_2",
+      "status": "passed",
+      "details": {
+        "checkpoints": 3,
+        "exact_hash_coverage": true
+      }
+    },
+    {
+      "name": "model_hash:random_2:random_2_17.cbm",
+      "status": "passed",
+      "details": {
+        "bytes": 5994116
+      }
+    },
+    {
+      "name": "model_hash:random_2:random_2_29.cbm",
+      "status": "passed",
+      "details": {
+        "bytes": 5994036
+      }
+    },
+    {
+      "name": "model_hash:random_2:random_2_43.cbm",
+      "status": "passed",
+      "details": {
+        "bytes": 13717660
+      }
+    },
+    {
+      "name": "model_reload:random_2",
+      "status": "passed",
+      "details": {
+        "checkpoints": 3,
+        "rows": 128,
+        "max_absolute_error": 0.0,
+        "fit_calls": 0
+      }
+    },
+    {
+      "name": "model_specification_hash_coverage:history_global",
+      "status": "passed",
+      "details": {
+        "checkpoints": 3,
+        "exact_hash_coverage": true
+      }
+    },
+    {
+      "name": "model_hash:history_global:history_global_17.pt",
+      "status": "passed",
+      "details": {
+        "bytes": 56399843
+      }
+    },
+    {
+      "name": "model_hash:history_global:history_global_29.pt",
+      "status": "passed",
+      "details": {
+        "bytes": 56401055
+      }
+    },
+    {
+      "name": "model_hash:history_global:history_global_43.pt",
+      "status": "passed",
+      "details": {
+        "bytes": 56401055
+      }
+    },
+    {
+      "name": "torch_checkpoint_state:history_global",
+      "status": "passed",
+      "details": {
+        "checkpoints": [
+          {
+            "file": "history_global_17.pt",
+            "parameters_and_buffers": 14094587,
+            "epoch": 1,
+            "global_dim": 37,
+            "d_model": 64,
+            "n_layers": 2
+          },
+          {
+            "file": "history_global_29.pt",
+            "parameters_and_buffers": 14094587,
+            "epoch": 1,
+            "global_dim": 37,
+            "d_model": 64,
+            "n_layers": 2
+          },
+          {
+            "file": "history_global_43.pt",
+            "parameters_and_buffers": 14094587,
+            "epoch": 1,
+            "global_dim": 37,
+            "d_model": 64,
+            "n_layers": 2
+          }
+        ],
+        "weights_only_deserialization": true,
+        "all_state_finite": true
+      }
+    },
+    {
+      "name": "history_prediction_replay:history_global",
+      "status": "passed",
+      "details": {
+        "checkpoints": 3,
+        "rows_compared": 128,
+        "rows_computed_before_comparison": 252,
+        "original_full_batch_shape": {
+          "groups": 16,
+          "candidate_width": 68,
+          "history_length": 512,
+          "actual_candidate_rows": 252,
+          "configured_batch_groups": 16
+        },
+        "batch_policy": "Unmodified first original GroupBatches batch, including every candidate; only comparison is capped.",
+        "device": "cuda",
+        "gpu": "NVIDIA A100-SXM4-80GB",
+        "registered_gpu": "NVIDIA A100-SXM4-80GB",
+        "gpu_name_matches_registration": true,
+        "torch": "2.8.0+cu128",
+        "cuda_build": "12.8",
+        "mixed_precision": "bf16",
+        "max_absolute_error": 0.0,
+        "absolute_tolerance": 1e-06,
+        "tolerance_note": "Strict absolute probability tolerance 1e-6 with original GPU batch geometry and registered autocast policy; no BF16 tolerance widening.",
+        "fit_calls": 0,
+        "refit_calls": 0
+      }
+    },
+    {
+      "name": "model_specification_hash_coverage:history_pure",
+      "status": "passed",
+      "details": {
+        "checkpoints": 1,
+        "exact_hash_coverage": true
+      }
+    },
+    {
+      "name": "model_hash:history_pure:history_pure_17.pt",
+      "status": "passed",
+      "details": {
+        "bytes": 56381715
+      }
+    },
+    {
+      "name": "torch_checkpoint_state:history_pure",
+      "status": "passed",
+      "details": {
+        "checkpoints": [
+          {
+            "file": "history_pure_17.pt",
+            "parameters_and_buffers": 14089777,
+            "epoch": 1,
+            "global_dim": 0,
+            "d_model": 64,
+            "n_layers": 2
+          }
+        ],
+        "weights_only_deserialization": true,
+        "all_state_finite": true
+      }
+    },
+    {
+      "name": "history_prediction_replay:history_pure",
+      "status": "passed",
+      "details": {
+        "checkpoints": 1,
+        "rows_compared": 128,
+        "rows_computed_before_comparison": 252,
+        "original_full_batch_shape": {
+          "groups": 16,
+          "candidate_width": 68,
+          "history_length": 512,
+          "actual_candidate_rows": 252,
+          "configured_batch_groups": 16
+        },
+        "batch_policy": "Unmodified first original GroupBatches batch, including every candidate; only comparison is capped.",
+        "device": "cuda",
+        "gpu": "NVIDIA A100-SXM4-80GB",
+        "registered_gpu": "NVIDIA A100-SXM4-80GB",
+        "gpu_name_matches_registration": true,
+        "torch": "2.8.0+cu128",
+        "cuda_build": "12.8",
+        "mixed_precision": "bf16",
+        "max_absolute_error": 0.0,
+        "absolute_tolerance": 1e-06,
+        "tolerance_note": "Strict absolute probability tolerance 1e-6 with original GPU batch geometry and registered autocast policy; no BF16 tolerance widening.",
+        "fit_calls": 0,
+        "refit_calls": 0
+      }
+    },
+    {
+      "name": "model_specification_hash_coverage:history_no_encoder",
+      "status": "passed",
+      "details": {
+        "checkpoints": 1,
+        "exact_hash_coverage": true
+      }
+    },
+    {
+      "name": "model_hash:history_no_encoder:history_no_encoder_17.pt",
+      "status": "passed",
+      "details": {
+        "bytes": 55862436
+      }
+    },
+    {
+      "name": "torch_checkpoint_state:history_no_encoder",
+      "status": "passed",
+      "details": {
+        "checkpoints": [
+          {
+            "file": "history_no_encoder_17.pt",
+            "parameters_and_buffers": 13961851,
+            "epoch": 1,
+            "global_dim": 37,
+            "d_model": 64,
+            "n_layers": 0
+          }
+        ],
+        "weights_only_deserialization": true,
+        "all_state_finite": true
+      }
+    },
+    {
+      "name": "history_prediction_replay:history_no_encoder",
+      "status": "passed",
+      "details": {
+        "checkpoints": 1,
+        "rows_compared": 128,
+        "rows_computed_before_comparison": 252,
+        "original_full_batch_shape": {
+          "groups": 16,
+          "candidate_width": 68,
+          "history_length": 512,
+          "actual_candidate_rows": 252,
+          "configured_batch_groups": 16
+        },
+        "batch_policy": "Unmodified first original GroupBatches batch, including every candidate; only comparison is capped.",
+        "device": "cuda",
+        "gpu": "NVIDIA A100-SXM4-80GB",
+        "registered_gpu": "NVIDIA A100-SXM4-80GB",
+        "gpu_name_matches_registration": true,
+        "torch": "2.8.0+cu128",
+        "cuda_build": "12.8",
+        "mixed_precision": "bf16",
+        "max_absolute_error": 0.0,
+        "absolute_tolerance": 1e-06,
+        "tolerance_note": "Strict absolute probability tolerance 1e-6 with original GPU batch geometry and registered autocast policy; no BF16 tolerance widening.",
+        "fit_calls": 0,
+        "refit_calls": 0
+      }
+    }
+  ]
+}

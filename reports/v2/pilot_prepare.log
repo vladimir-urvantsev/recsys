@@ -1,0 +1,7 @@
+features user: 5,223 daily keys, 0.0s
+features item: 180,999 daily keys, 0.1s
+features artist: 124,385 daily keys, 0.1s
+features album: 163,199 daily keys, 0.1s
+features user_item: 184,637 daily keys, 0.1s
+features user_artist: 135,775 daily keys, 0.1s
+features user_album: 168,458 daily keys, 0.1s

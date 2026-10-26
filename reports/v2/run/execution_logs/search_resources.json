@@ -1,0 +1,12 @@
+{
+  "observer": "external /proc VmHWM sampling every 5 seconds; includes process high-water mark before observer start",
+  "processes": [
+    {
+      "pid": 1727,
+      "command": ".venv/bin/python -u -m recsys_history_v2.run --config configs/v2.yaml --phase search",
+      "peak_rss_bytes": 11149631488,
+      "samples": 834,
+      "latest_rss_bytes": 4784164864
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "train_users": 6394,
+  "test_users": 6323,
+  "test_users_with_train_targets": 5127,
+  "test_users_without_train_targets": 1196
+}

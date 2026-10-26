@@ -1,0 +1,14 @@
+{
+  "synthetic": true,
+  "purpose": "CUDA compatibility/capacity check only; not dataset throughput or model-quality evidence",
+  "batch_groups": 16,
+  "context_length": 512,
+  "candidates_per_group": 512,
+  "parameters": 14517179,
+  "measured_steps": 10,
+  "mean_step_seconds": 0.11624876530840993,
+  "peak_cuda_bytes": 699460608,
+  "torch": "2.8.0+cu128",
+  "cuda": "12.8",
+  "gpu": "NVIDIA A100-SXM4-80GB"
+}

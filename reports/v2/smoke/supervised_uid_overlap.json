@@ -1,0 +1,6 @@
+{
+  "train_users": 28,
+  "test_users": 24,
+  "test_users_with_train_targets": 20,
+  "test_users_without_train_targets": 4
+}

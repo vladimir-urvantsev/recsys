@@ -1,0 +1,47 @@
+{
+  "observer": "external /proc VmHWM sampling every 5 seconds; includes process high-water mark before observer start",
+  "processes": [
+    {
+      "pid": 2894,
+      "command": ".venv/bin/python await_search.py",
+      "peak_rss_bytes": 11907072,
+      "samples": 203,
+      "latest_rss_bytes": 11907072
+    },
+    {
+      "pid": 3540,
+      "command": ".venv/bin/python -u -m recsys_history_v2.run --config configs/v2.yaml --phase evaluate",
+      "peak_rss_bytes": 9455562752,
+      "samples": 45,
+      "latest_rss_bytes": 5408813056
+    },
+    {
+      "pid": 3904,
+      "command": ".venv/bin/python -u scripts/diagnose_v2_seeds.py --config configs/v2.yaml",
+      "peak_rss_bytes": 8300863488,
+      "samples": 55,
+      "latest_rss_bytes": 5568913408
+    },
+    {
+      "pid": 4333,
+      "command": ".venv/bin/python -u scripts/diagnose_v2_memory.py --config configs/v2.yaml",
+      "peak_rss_bytes": 1690865664,
+      "samples": 4,
+      "latest_rss_bytes": 1637036032
+    },
+    {
+      "pid": 4357,
+      "command": ".venv/bin/python -u -m recsys_history_v2.run --config configs/v2.yaml --phase report",
+      "peak_rss_bytes": 1415213056,
+      "samples": 2,
+      "latest_rss_bytes": 1297788928
+    },
+    {
+      "pid": 4395,
+      "command": ".venv/bin/python -u scripts/audit_v2_results.py --config configs/v2.yaml",
+      "peak_rss_bytes": 1851695104,
+      "samples": 16,
+      "latest_rss_bytes": 1851695104
+    }
+  ]
+}

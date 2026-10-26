@@ -1,0 +1,425 @@
+{
+  "experiment": "v2 fresh-user prospective warm-user confirmation",
+  "dataset": "yandex/yambda sequential/50m",
+  "config": {
+    "study": "v2-complete-technical-smoke",
+    "n_users": 50,
+    "development_users": 10,
+    "user_seed": 20261026,
+    "cohort_seed": 371,
+    "exclude_manifest": "reports/v2/pilot_excluded_users.json",
+    "day_seed": 1701,
+    "raw_dir": "data/raw",
+    "processed_dir": "data/processed/v2_smoke",
+    "output_dir": "reports/v2/smoke",
+    "warmup_days": 30,
+    "split_days": [
+      120,
+      150,
+      180
+    ],
+    "days_per_user": {
+      "train": 3,
+      "tune": 2,
+      "select": 2,
+      "test": 2
+    },
+    "embargo_days": 1,
+    "manual_windows": [
+      7,
+      30,
+      null
+    ],
+    "auto_windows": [
+      3,
+      14
+    ],
+    "auto_half_lives": [
+      10
+    ],
+    "model_seeds": [
+      17
+    ],
+    "threads": 2,
+    "iterations": 30,
+    "early_stopping": 10,
+    "hyper_grid": [
+      {
+        "depth": 3,
+        "learning_rate": 0.1,
+        "l2_leaf_reg": 5
+      },
+      {
+        "depth": 4,
+        "learning_rate": 0.1,
+        "l2_leaf_reg": 5
+      }
+    ],
+    "selection_prefixes": [
+      1,
+      2,
+      3
+    ],
+    "selection_feature_penalty": 1e-06,
+    "random_controls": 3,
+    "random_seed": 8821,
+    "bootstrap_samples": 100,
+    "context_recent": 8,
+    "context_older": 8,
+    "neural_max_epochs": 2,
+    "neural_patience": 1,
+    "neural_batch_groups": 4,
+    "neural_weight_decay": 0.0001,
+    "neural_grid": [
+      {
+        "d_model": 16,
+        "n_layers": 1,
+        "n_heads": 2,
+        "dropout": 0.0,
+        "learning_rate": 0.003,
+        "pairwise_weight": 0.0
+      },
+      {
+        "d_model": 16,
+        "n_layers": 1,
+        "n_heads": 2,
+        "dropout": 0.0,
+        "learning_rate": 0.003,
+        "pairwise_weight": 0.1
+      }
+    ],
+    "blend_weights": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "neural_ablations": [
+      "pure_history",
+      "no_event_encoder"
+    ],
+    "ablation_seeds": [
+      17
+    ],
+    "device": "cpu",
+    "mixed_precision": "fp32",
+    "embedding_buckets": {
+      "item": 257,
+      "artist": 67,
+      "album": 257,
+      "user": 31
+    },
+    "is_pilot": true,
+    "end_day": 210
+  },
+  "config_sha256": "1a51cf23d3f8e809e243a34167e30ae4302fbfb1e3a2342dc22d69d4ac6a7aea",
+  "data_module_sha256": "ccdac1b147b0f19194fd09749f28cf772370c4cecffb546f39c3701256ef06db",
+  "v1_data_module_sha256": "b397d0608e805d3d93e23b191879cd260900af21a19adeb36448caf2df16d9ac",
+  "sources": {
+    "multi_event.parquet": {
+      "url": "https://huggingface.co/datasets/yandex/yambda/resolve/dd6f3a19eef5866e346c3270e098baa641a44948/sequential/50m/multi_event.parquet",
+      "revision": "dd6f3a19eef5866e346c3270e098baa641a44948",
+      "sha256": "2eaf0619bcfadd31a907e2bc88aab7ec34e36cbafca41f4e6ff34188985d990d",
+      "bytes": 437501893
+    },
+    "artist_item_mapping.parquet": {
+      "url": "https://huggingface.co/datasets/yandex/yambda/resolve/dd6f3a19eef5866e346c3270e098baa641a44948/artist_item_mapping.parquet",
+      "revision": "dd6f3a19eef5866e346c3270e098baa641a44948",
+      "sha256": "cf1110aa2413ed70008ec9232d395660b2181ffda731002fb74da54e87b6f25d",
+      "bytes": 38274621
+    },
+    "album_item_mapping.parquet": {
+      "url": "https://huggingface.co/datasets/yandex/yambda/resolve/dd6f3a19eef5866e346c3270e098baa641a44948/album_item_mapping.parquet",
+      "revision": "dd6f3a19eef5866e346c3270e098baa641a44948",
+      "sha256": "559b6576063d96280414574b32292eee7b47ee0b9f2952cb3ae670a5d19125e4",
+      "bytes": 54528894
+    }
+  },
+  "excluded_manifest": {
+    "path": "reports/v2/pilot_excluded_users.json",
+    "sha256": "54f313540b1c53bf8423878d9a9ea7eb4b37909072a011ee94bc123cdb5d5ca0",
+    "declared_users": 9000,
+    "source_users_excluded": 9000
+  },
+  "source_users": 10000,
+  "available_fresh_users": 1000,
+  "sampled_uids": [
+    9900,
+    14000,
+    31200,
+    90400,
+    91900,
+    185800,
+    262900,
+    268000,
+    297900,
+    317700,
+    343900,
+    349000,
+    355000,
+    359600,
+    363500,
+    368300,
+    371400,
+    383900,
+    432700,
+    454200,
+    457300,
+    465400,
+    518700,
+    542100,
+    563000,
+    578700,
+    581300,
+    601700,
+    612100,
+    627600,
+    650500,
+    663800,
+    664400,
+    669500,
+    676600,
+    678900,
+    740900,
+    753000,
+    772300,
+    879000,
+    941100,
+    950400,
+    955900,
+    956800,
+    957000,
+    964900,
+    972800,
+    977600,
+    980000,
+    999200
+  ],
+  "development_uids": [
+    91900,
+    185800,
+    359600,
+    383900,
+    454200,
+    457300,
+    678900,
+    772300,
+    956800,
+    972800
+  ],
+  "confirmation_uids": [
+    9900,
+    14000,
+    31200,
+    90400,
+    262900,
+    268000,
+    297900,
+    317700,
+    343900,
+    349000,
+    355000,
+    363500,
+    368300,
+    371400,
+    432700,
+    465400,
+    518700,
+    542100,
+    563000,
+    578700,
+    581300,
+    601700,
+    612100,
+    627600,
+    650500,
+    663800,
+    664400,
+    669500,
+    676600,
+    740900,
+    753000,
+    879000,
+    941100,
+    950400,
+    955900,
+    957000,
+    964900,
+    977600,
+    980000,
+    999200
+  ],
+  "sampled_users": 50,
+  "development_users": 10,
+  "confirmation_users": 40,
+  "old_user_overlap": 0,
+  "development_confirmation_overlap": 0,
+  "retained_events": 219287,
+  "retained_items": 43357,
+  "event_type_counts": {
+    "listen": 211071,
+    "like": 5819,
+    "unlike": 2036,
+    "dislike": 302,
+    "undislike": 59
+  },
+  "events_per_sampled_user": {
+    "9900": 4202,
+    "14000": 12482,
+    "31200": 10435,
+    "90400": 2726,
+    "91900": 5168,
+    "185800": 540,
+    "262900": 10289,
+    "268000": 6309,
+    "297900": 578,
+    "317700": 7485,
+    "343900": 251,
+    "349000": 6796,
+    "355000": 13,
+    "359600": 5600,
+    "363500": 1489,
+    "368300": 9562,
+    "371400": 3754,
+    "383900": 861,
+    "432700": 308,
+    "454200": 10046,
+    "457300": 3111,
+    "465400": 2246,
+    "518700": 2046,
+    "542100": 643,
+    "563000": 471,
+    "578700": 11,
+    "581300": 209,
+    "601700": 14203,
+    "612100": 2038,
+    "627600": 105,
+    "650500": 3075,
+    "663800": 2388,
+    "664400": 2365,
+    "669500": 571,
+    "676600": 2815,
+    "678900": 429,
+    "740900": 2459,
+    "753000": 773,
+    "772300": 16348,
+    "879000": 783,
+    "941100": 12685,
+    "950400": 798,
+    "955900": 24036,
+    "956800": 1092,
+    "957000": 8144,
+    "964900": 7553,
+    "972800": 1874,
+    "977600": 80,
+    "980000": 901,
+    "999200": 6141
+  },
+  "history_lengths": {
+    "min": 11,
+    "median": 2376.5,
+    "p90": 10639.700000000003,
+    "max": 24036
+  },
+  "timestamp_min": 9565,
+  "timestamp_max": 25997670,
+  "relations": {
+    "artist_id": {
+      "source_rows": 9271906,
+      "sample_items_with_mapping": 43280,
+      "sample_items_with_multiple_values": 6,
+      "max_values_per_sample_item": 2,
+      "sample_items_missing_mapping": 77
+    },
+    "album_id": {
+      "source_rows": 9651644,
+      "sample_items_with_mapping": 42927,
+      "sample_items_with_multiple_values": 16291,
+      "max_values_per_sample_item": 241,
+      "sample_items_missing_mapping": 430
+    }
+  },
+  "purged_label_rows_by_split_before_cohort_filter": {
+    "train": 0,
+    "tune": 0,
+    "select": 1,
+    "test": 0
+  },
+  "query_end_day_exclusive": 210,
+  "splits": {
+    "train": {
+      "rows": 2098,
+      "users": 28,
+      "groups": 83,
+      "day_min": 31,
+      "day_max": 119,
+      "group_size_median": 17.0,
+      "group_size_p90": 55.999999999999986,
+      "labels_sealed": false,
+      "positive_rows": 1429,
+      "positive_rate": 0.6811248660087585
+    },
+    "tune": {
+      "rows": 329,
+      "users": 7,
+      "groups": 14,
+      "day_min": 121,
+      "day_max": 145,
+      "group_size_median": 18.5,
+      "group_size_p90": 48.2,
+      "labels_sealed": false,
+      "positive_rows": 207,
+      "positive_rate": 0.6291793584823608
+    },
+    "select": {
+      "rows": 172,
+      "users": 7,
+      "groups": 12,
+      "day_min": 150,
+      "day_max": 179,
+      "group_size_median": 5.5,
+      "group_size_p90": 37.400000000000006,
+      "labels_sealed": false,
+      "positive_rows": 80,
+      "positive_rate": 0.4651162922382355
+    },
+    "test": {
+      "rows": 1164,
+      "users": 24,
+      "groups": 44,
+      "day_min": 180,
+      "day_max": 209,
+      "group_size_median": 14.0,
+      "group_size_p90": 62.0,
+      "labels_sealed": true
+    }
+  },
+  "rules": {
+    "sample": "uniform users after excluding every v1 sampled UID; full available histories",
+    "cohort": "uniform development subset before reading outcomes; remaining users confirmation",
+    "training": "early training queries from both cohorts; not a cold-user experiment",
+    "validation": "tune/select queries from development users only",
+    "confirmation": "test queries from confirmation users only, query.day<end_day; their tune/select rows are not supervised fitting/evaluation targets, while causal earlier events remain available history",
+    "label": "first timestamp/source-order listen per user-item-day across sources, then is_organic==0; ratio>=50",
+    "availability": "listen timestamp+ceil(length*uncapped_ratio/100)+5; other timestamp+5",
+    "feature_cutoff": "available_day < query.day - embargo_days",
+    "sealing": "test label absent from queries and test target ratio/duration absent from all queries; separate test_labels.parquet",
+    "sealing_limit": "procedural guard only: complete raw histories retain later outcomes for declared rolling evaluation"
+  },
+  "artifacts": {
+    "sample_events.parquet": {
+      "sha256": "bb881167da2c040db80f7b7abea295bae38e6595e671f86493907849d834c928",
+      "bytes": 4453821
+    },
+    "queries.parquet": {
+      "sha256": "7e601080308c7370fa7544675fb7a047216c6a6cc9178cd3d9168ff4ac537b51",
+      "bytes": 68565
+    },
+    "test_labels.parquet": {
+      "sha256": "b1da17ae7dd43863ea89b4bcc41130db42171c7e7adc4064e88674dc1e448698",
+      "bytes": 9881
+    }
+  },
+  "elapsed_seconds": 10.668814749995363
+}

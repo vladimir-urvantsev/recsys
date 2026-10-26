@@ -1,0 +1,113 @@
+[
+  {
+    "seed": 17,
+    "epochs": 1,
+    "params": {
+      "d_model": 64,
+      "n_layers": 2,
+      "n_heads": 4,
+      "dropout": 0.1,
+      "learning_rate": 0.0003,
+      "pairwise_weight": 0.0
+    },
+    "pure": false,
+    "no_encoder": false,
+    "fit_seconds": 431.1983684609877,
+    "tune_logloss": 0.46323435464024043,
+    "epoch_log": [
+      {
+        "epoch": 1,
+        "train_logloss": 0.4807137817250942,
+        "tune_logloss": 0.46323435464024043
+      },
+      {
+        "epoch": 2,
+        "train_logloss": 0.44695550579544524,
+        "tune_logloss": 0.46737518134534817
+      },
+      {
+        "epoch": 3,
+        "train_logloss": 0.39145474892565113,
+        "tune_logloss": 0.5030368061666544
+      }
+    ],
+    "parameters": 14094587,
+    "device": "cuda",
+    "cuda_peak_bytes": 1108408320,
+    "checkpoint": "reports/v2/run/neural/trial_0.pt"
+  },
+  {
+    "seed": 17,
+    "epochs": 1,
+    "params": {
+      "d_model": 128,
+      "n_layers": 2,
+      "n_heads": 4,
+      "dropout": 0.1,
+      "learning_rate": 0.0003,
+      "pairwise_weight": 0.0
+    },
+    "pure": false,
+    "no_encoder": false,
+    "fit_seconds": 432.654024449992,
+    "tune_logloss": 0.46369533738879454,
+    "epoch_log": [
+      {
+        "epoch": 1,
+        "train_logloss": 0.4827386565026704,
+        "tune_logloss": 0.46369533738879454
+      },
+      {
+        "epoch": 2,
+        "train_logloss": 0.45152618939895156,
+        "tune_logloss": 0.46862209352668643
+      },
+      {
+        "epoch": 3,
+        "train_logloss": 0.3949482023471801,
+        "tune_logloss": 0.49680601721937456
+      }
+    ],
+    "parameters": 14517179,
+    "device": "cuda",
+    "cuda_peak_bytes": 1252511744,
+    "checkpoint": "reports/v2/run/neural/trial_1.pt"
+  },
+  {
+    "seed": 17,
+    "epochs": 1,
+    "params": {
+      "d_model": 128,
+      "n_layers": 2,
+      "n_heads": 4,
+      "dropout": 0.1,
+      "learning_rate": 0.0003,
+      "pairwise_weight": 0.1
+    },
+    "pure": false,
+    "no_encoder": false,
+    "fit_seconds": 524.4600319940364,
+    "tune_logloss": 0.46394304504882217,
+    "epoch_log": [
+      {
+        "epoch": 1,
+        "train_logloss": 0.4827981361475786,
+        "tune_logloss": 0.46394304504882217
+      },
+      {
+        "epoch": 2,
+        "train_logloss": 0.45182610494755554,
+        "tune_logloss": 0.46908839408740005
+      },
+      {
+        "epoch": 3,
+        "train_logloss": 0.3949085019555336,
+        "tune_logloss": 0.5001580384601693
+      }
+    ],
+    "parameters": 14517179,
+    "device": "cuda",
+    "cuda_peak_bytes": 1252780032,
+    "checkpoint": "reports/v2/run/neural/trial_2.pt"
+  }
+]

@@ -1,0 +1,133 @@
+RUN ['python', '-m', 'venv', '--system-site-packages', '.venv']
+RUN ['.venv/bin/python', '-m', 'pip', 'install', '--no-cache-dir', '-r', 'requirements.lock']
+Collecting catboost==1.2.10 (from -r requirements.lock (line 1))
+  Downloading catboost-1.2.10-cp312-cp312-manylinux2014_x86_64.whl.metadata (1.2 kB)
+Collecting certifi==2026.10.23 (from -r requirements.lock (line 2))
+  Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+Requirement already satisfied: charset-normalizer==3.5.2 in /usr/local/lib/python3.12/dist-packages (from -r requirements.lock (line 3)) (3.5.2)
+Collecting cloudpickle==3.1.2 (from -r requirements.lock (line 4))
+  Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+Collecting contourpy==1.4.0 (from -r requirements.lock (line 5))
+  Downloading contourpy-1.4.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+Collecting cycler==0.12.1 (from -r requirements.lock (line 6))
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools==4.67.0 (from -r requirements.lock (line 7))
+  Downloading fonttools-4.67.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (137 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 137.2/137.2 kB 10.7 MB/s eta 0:00:00
+Collecting graphviz==0.21 (from -r requirements.lock (line 8))
+  Downloading graphviz-0.21-py3-none-any.whl.metadata (12 kB)
+Requirement already satisfied: idna==3.20 in /usr/local/lib/python3.12/dist-packages (from -r requirements.lock (line 9)) (3.20)
+Collecting iniconfig==2.3.1 (from -r requirements.lock (line 10))
+  Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting joblib==1.6.0 (from -r requirements.lock (line 11))
+  Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting kiwisolver==1.5.1 (from -r requirements.lock (line 12))
+  Downloading kiwisolver-1.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.2 kB)
+Collecting matplotlib==3.11.2 (from -r requirements.lock (line 13))
+  Downloading matplotlib-3.11.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.3/80.3 kB 305.0 MB/s eta 0:00:00
+Collecting narwhals==2.27.1 (from -r requirements.lock (line 14))
+  Downloading narwhals-2.27.1-py3-none-any.whl.metadata (15 kB)
+Collecting numpy==2.5.4 (from -r requirements.lock (line 15))
+  Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Requirement already satisfied: packaging==26.3 in /usr/local/lib/python3.12/dist-packages (from -r requirements.lock (line 16)) (26.3)
+Collecting pandas==3.1.0 (from -r requirements.lock (line 17))
+  Downloading pandas-3.1.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (18 kB)
+Collecting pillow==13.0.0 (from -r requirements.lock (line 18))
+  Downloading pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+Collecting plotly==7.1.0 (from -r requirements.lock (line 19))
+  Downloading plotly-7.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting pluggy==1.7.0 (from -r requirements.lock (line 20))
+  Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+Collecting pyarrow==26.0.0 (from -r requirements.lock (line 21))
+  Downloading pyarrow-26.0.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+Requirement already satisfied: pygments==2.21.0 in /usr/local/lib/python3.12/dist-packages (from -r requirements.lock (line 22)) (2.21.0)
+Collecting pyparsing==3.3.3 (from -r requirements.lock (line 23))
+  Downloading pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+Collecting pytest==9.1.1 (from -r requirements.lock (line 24))
+  Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting python-dateutil==3.0.0 (from -r requirements.lock (line 25))
+  Downloading python_dateutil-3.0.0-py2.py3-none-any.whl.metadata (8.2 kB)
+Requirement already satisfied: pyyaml==6.0.3 in /usr/local/lib/python3.12/dist-packages (from -r requirements.lock (line 26)) (6.0.3)
+Requirement already satisfied: requests==2.34.2 in /usr/local/lib/python3.12/dist-packages (from -r requirements.lock (line 27)) (2.34.2)
+Collecting scikit-learn==1.9.1 (from -r requirements.lock (line 28))
+  Downloading scikit_learn-1.9.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.3 kB)
+Collecting scipy==1.18.1 (from -r requirements.lock (line 29))
+  Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.4/62.4 kB 92.4 MB/s eta 0:00:00
+Collecting six==1.17.0 (from -r requirements.lock (line 30))
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting threadpoolctl==3.7.0 (from -r requirements.lock (line 31))
+  Downloading threadpoolctl-3.7.0-py3-none-any.whl.metadata (24 kB)
+Requirement already satisfied: tzdata==2026.5 in /usr/local/lib/python3.12/dist-packages (from -r requirements.lock (line 32)) (2026.5)
+Requirement already satisfied: urllib3==2.8.0 in /usr/local/lib/python3.12/dist-packages (from -r requirements.lock (line 33)) (2.8.0)
+Downloading catboost-1.2.10-cp312-cp312-manylinux2014_x86_64.whl (97.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.1/97.1 MB 78.2 MB/s eta 0:00:00
+Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.1/135.1 kB 347.7 MB/s eta 0:00:00
+Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+Downloading contourpy-1.4.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (383 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 383.2/383.2 kB 148.2 MB/s eta 0:00:00
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.67.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 83.9 MB/s eta 0:00:00
+Downloading graphviz-0.21-py3-none-any.whl (47 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.3/47.3 kB 309.0 MB/s eta 0:00:00
+Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 306.1/306.1 kB 157.2 MB/s eta 0:00:00
+Downloading kiwisolver-1.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 91.5 MB/s eta 0:00:00
+Downloading matplotlib-3.11.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.9/9.9 MB 82.2 MB/s eta 0:00:00
+Downloading narwhals-2.27.1-py3-none-any.whl (483 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 483.2/483.2 kB 222.5 MB/s eta 0:00:00
+Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 88.0 MB/s eta 0:00:00
+Downloading pandas-3.1.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 89.3 MB/s eta 0:00:00
+Downloading pillow-13.0.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 92.4 MB/s eta 0:00:00
+Downloading plotly-7.1.0-py3-none-any.whl (9.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 88.5 MB/s eta 0:00:00
+Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+Downloading pyarrow-26.0.0-cp312-cp312-manylinux_2_28_x86_64.whl (53.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.9/53.9 MB 104.4 MB/s eta 0:00:00
+Downloading pyparsing-3.3.3-py3-none-any.whl (126 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 126.4/126.4 kB 342.6 MB/s eta 0:00:00
+Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 386.5/386.5 kB 184.0 MB/s eta 0:00:00
+Downloading python_dateutil-3.0.0-py2.py3-none-any.whl (94 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.7/94.7 kB 259.1 MB/s eta 0:00:00
+Downloading scikit_learn-1.9.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.2/9.2 MB 108.5 MB/s eta 0:00:00
+Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 111.8 MB/s eta 0:00:00
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading threadpoolctl-3.7.0-py3-none-any.whl (26 kB)
+Installing collected packages: threadpoolctl, six, pyparsing, pyarrow, pluggy, pillow, numpy, narwhals, kiwisolver, iniconfig, graphviz, fonttools, cycler, cloudpickle, certifi, scipy, python-dateutil, pytest, plotly, joblib, contourpy, scikit-learn, pandas, matplotlib, catboost
+  Attempting uninstall: six
+    Found existing installation: six 1.16.0
+    Not uninstalling six at /usr/lib/python3/dist-packages, outside environment /workspace/recsys-v2/.venv
+    Can't uninstall 'six'. No files were found to uninstall.
+  Attempting uninstall: pyparsing
+    Found existing installation: pyparsing 3.1.1
+    Not uninstalling pyparsing at /usr/lib/python3/dist-packages, outside environment /workspace/recsys-v2/.venv
+    Can't uninstall 'pyparsing'. No files were found to uninstall.
+  Attempting uninstall: pillow
+    Found existing installation: pillow 12.3.0
+    Not uninstalling pillow at /usr/local/lib/python3.12/dist-packages, outside environment /workspace/recsys-v2/.venv
+    Can't uninstall 'pillow'. No files were found to uninstall.
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.5.2
+    Not uninstalling numpy at /usr/local/lib/python3.12/dist-packages, outside environment /workspace/recsys-v2/.venv
+    Can't uninstall 'numpy'. No files were found to uninstall.
+  Attempting uninstall: certifi
+    Found existing installation: certifi 2026.7.22
+    Not uninstalling certifi at /usr/local/lib/python3.12/dist-packages, outside environment /workspace/recsys-v2/.venv
+    Can't uninstall 'certifi'. No files were found to uninstall.
+  Attempting uninstall: python-dateutil
+    Found existing installation: python-dateutil 2.9.0.post0
+    Not uninstalling python-dateutil at /usr/local/lib/python3.12/dist-packages, outside environment /workspace/recsys-v2/.venv
+    Can't uninstall 'python-dateutil'. No files were found to uninstall.
+Successfully installed catboost-1.2.10 certifi-2026.10.23 cloudpickle-3.1.2 contourpy-1.4.0 cycler-0.12.1 fonttools-4.67.0 graphviz-0.21 iniconfig-2.3.1 joblib-1.6.0 kiwisolver-1.5.1 matplotlib-3.11.2 narwhals-2.27.1 numpy-2.5.4 pandas-3.1.0 pillow-13.0.0 plotly-7.1.0 pluggy-1.7.0 pyarrow-26.0.0 pyparsing-3.3.3 pytest-9.1.1 python-dateutil-3.0.0 scikit-learn-1.9.1 scipy-1.18.1 six-1.17.0 threadpoolctl-3.7.0

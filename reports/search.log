@@ -1,0 +1,12 @@
+tune manual 0: loss=0.492038, trees=236, 14.6s
+tune manual 1: loss=0.488628, trees=283, 22.6s
+tune manual 2: loss=0.487425, trees=222, 14.3s
+tune all_auto 0: loss=0.486673, trees=418, 38.4s
+tune all_auto 1: loss=0.482808, trees=396, 45.1s
+tune all_auto 2: loss=0.488055, trees=121, 13.6s
+select prefix=1 loss=0.501249 objective=0.501263 features=112
+select prefix=2 loss=0.505725 objective=0.505753 features=126
+select prefix=4 loss=0.507731 objective=0.507787 features=154
+select prefix=6 loss=0.503639 objective=0.503723 features=182
+select prefix=9 loss=0.503741 objective=0.503867 features=224
+SEARCH FROZEN: ['window_14']

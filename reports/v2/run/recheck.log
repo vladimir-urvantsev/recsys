@@ -1,0 +1,258 @@
+Local recheck of the frozen submission
+
+Verified 3 pinned raw inputs, 18 archived V1 weights, 23 archived V2 weights and 28 frozen source entries.
+Verified 7 PDF pages and 18 input hashes. Tested guards for completed preparation, audit overwrite, and cross-study PDF export.
+
+Local test suite
+........................................................................ [ 45%]
+........................................................................ [ 90%]
+................                                                         [100%]
+160 passed in 21.22s
+
+Independent reconstruction from Yambda and scikit-learn metrics
+train 1787611 6394 65363
+tune 68447 695 2421
+select 73274 745 2631
+test 1110396 6323 38948
+Independent raw reconstruction: exact candidate keys and labels 1110396 ; events 42906083
+Independent sklearn LogLoss and AUC matched for 10 models
+Independent sklearn NDCG@10 selected_auto 0.7549089477660216 mixed users 5712
+Independent sklearn NDCG@10 history_global 0.7320322048210959 mixed users 5712
+
+V2 CatBoost model files and configuration
+manual deserialized 3 checkpoints; 98 features; 257 trees
+all_auto deserialized 3 checkpoints; 224 features; 296 trees
+selected_auto deserialized 3 checkpoints; 126 features; 257 trees
+random_0 deserialized 3 checkpoints; 126 features; 257 trees
+random_1 deserialized 3 checkpoints; 126 features; 257 trees
+random_2 deserialized 3 checkpoints; 126 features; 257 trees
+Reproduction configuration matches original science and differs only by study name and output paths
+
+V1 audit after exact feature/query/event reconstruction
+Exact match: V1 regenerated events, queries, features, feature group bytes. Manifest fields differ only at {'elapsed_seconds'}
+PASS required_artifacts_present_and_readable
+PASS frozen_config_and_artifact_hash_chain
+PASS current_source_matches_frozen_experiment
+PASS local_queries.parquet_hash
+PASS local_features.parquet_hash
+PASS local_sample_events.parquet_hash
+PASS saved_predictions_align_with_local_test_labels
+PASS recomputed_saved_prediction_metrics_constant
+PASS recomputed_saved_prediction_metrics_manual
+PASS recomputed_saved_prediction_metrics_all_auto
+PASS recomputed_saved_prediction_metrics_selected_auto
+PASS recomputed_saved_prediction_metrics_random_auto
+PASS recomputed_saved_prediction_metrics_static
+PASS recomputed_saved_prediction_metrics_no_pair_relations
+PASS independent_sklearn_tie_aware_ndcg
+PASS trained_model_reload_predictions_manual
+PASS trained_model_reload_predictions_all_auto
+PASS trained_model_reload_predictions_selected_auto
+PASS trained_model_reload_predictions_random_auto
+PASS trained_model_reload_predictions_static
+PASS trained_model_reload_predictions_no_pair_relations
+Audit written: /private/tmp/recsys-final-recheck-v1.json
+
+V2 main local audit with archived weights and downloaded raw data
+PASS required_final_artifacts
+PASS registration_to_final_hash_chain
+PASS frozen_execution_source_attestation
+PASS v1_original_experiment_source_preserved
+PASS registered_cohort_separation_and_test_period
+PASS fresh_users_exclude_prior_experiments
+PASS raw_uid_sampling_reproduces_registered_cohort
+SKIP prepared_hash:sample_events.parquet: Large local prepared artifact is absent
+SKIP prepared_hash:queries.parquet: Large local prepared artifact is absent
+SKIP prepared_hash:test_labels.parquet: Large local prepared artifact is absent
+SKIP prepared_hash:features.parquet: Large local prepared artifact is absent
+PASS prepared_hash:feature_groups.json
+PASS prepared_hash:manifest.json
+SKIP prepared_hash:global_features.npy: Large local prepared artifact is absent
+PASS prepared_hash:global_normalizer.json
+SKIP prepared_hash:contexts/history_ids.npy: Large local prepared artifact is absent
+SKIP prepared_hash:contexts/history_type.npy: Large local prepared artifact is absent
+SKIP prepared_hash:contexts/history_ratio.npy: Large local prepared artifact is absent
+SKIP prepared_hash:contexts/history_organic.npy: Large local prepared artifact is absent
+SKIP prepared_hash:contexts/history_age.npy: Large local prepared artifact is absent
+SKIP prepared_hash:contexts/history_mask.npy: Large local prepared artifact is absent
+SKIP prepared_hash:contexts/query_group.npy: Large local prepared artifact is absent
+SKIP prepared_hash:contexts/group_uid.npy: Large local prepared artifact is absent
+SKIP prepared_hash:contexts/group_day.npy: Large local prepared artifact is absent
+SKIP prepared_hash:contexts/group_id.npy: Large local prepared artifact is absent
+SKIP prepared_hash:contexts/group_available_count.npy: Large local prepared artifact is absent
+SKIP prepared_hash:contexts/group_retained_count.npy: Large local prepared artifact is absent
+PASS blind_probabilities_unchanged_after_outcome_join
+SKIP stored_query_label_seal_alignment_and_cohorts: Local query table absent in compact bundle
+SKIP separately_stored_outcomes_match_final_join: Sealed outcome file absent; final joined result still checked
+PASS saved_metric_recomputation:manual
+PASS saved_metric_recomputation:all_auto
+PASS saved_metric_recomputation:selected_auto
+PASS saved_metric_recomputation:random_0
+PASS saved_metric_recomputation:random_1
+PASS saved_metric_recomputation:random_2
+PASS saved_metric_recomputation:history_global
+PASS saved_metric_recomputation:history_pure
+PASS saved_metric_recomputation:history_no_encoder
+PASS saved_metric_recomputation:hybrid
+PASS primary_paired_user_bootstrap_recomputed
+PASS secondary_paired_user_bootstrap_recomputed:selected_auto
+PASS secondary_paired_user_bootstrap_recomputed:all_auto
+PASS secondary_paired_user_bootstrap_recomputed:hybrid
+PASS secondary_temporal_sensitivity_recomputed
+PASS independent_sklearn_tie_aware_ndcg
+PASS frozen_hybrid_composition
+PASS model_specification_hash_coverage:manual
+PASS model_hash:manual:manual_17.cbm
+PASS model_hash:manual:manual_29.cbm
+PASS model_hash:manual:manual_43.cbm
+SKIP model_reload:manual: Local queries/features needed for bounded CatBoost prediction replay
+PASS model_specification_hash_coverage:all_auto
+PASS model_hash:all_auto:all_auto_17.cbm
+PASS model_hash:all_auto:all_auto_29.cbm
+PASS model_hash:all_auto:all_auto_43.cbm
+SKIP model_reload:all_auto: Local queries/features needed for bounded CatBoost prediction replay
+PASS model_specification_hash_coverage:selected_auto
+PASS model_hash:selected_auto:selected_auto_17.cbm
+PASS model_hash:selected_auto:selected_auto_29.cbm
+PASS model_hash:selected_auto:selected_auto_43.cbm
+SKIP model_reload:selected_auto: Local queries/features needed for bounded CatBoost prediction replay
+PASS model_specification_hash_coverage:random_0
+PASS model_hash:random_0:random_0_17.cbm
+PASS model_hash:random_0:random_0_29.cbm
+PASS model_hash:random_0:random_0_43.cbm
+SKIP model_reload:random_0: Local queries/features needed for bounded CatBoost prediction replay
+PASS model_specification_hash_coverage:random_1
+PASS model_hash:random_1:random_1_17.cbm
+PASS model_hash:random_1:random_1_29.cbm
+PASS model_hash:random_1:random_1_43.cbm
+SKIP model_reload:random_1: Local queries/features needed for bounded CatBoost prediction replay
+PASS model_specification_hash_coverage:random_2
+PASS model_hash:random_2:random_2_17.cbm
+PASS model_hash:random_2:random_2_29.cbm
+PASS model_hash:random_2:random_2_43.cbm
+SKIP model_reload:random_2: Local queries/features needed for bounded CatBoost prediction replay
+PASS model_specification_hash_coverage:history_global
+PASS model_hash:history_global:history_global_17.pt
+PASS model_hash:history_global:history_global_29.pt
+PASS model_hash:history_global:history_global_43.pt
+PASS torch_checkpoint_state:history_global
+SKIP history_prediction_replay:history_global: Local sealed queries/contexts/global inputs absent
+PASS model_specification_hash_coverage:history_pure
+PASS model_hash:history_pure:history_pure_17.pt
+PASS torch_checkpoint_state:history_pure
+SKIP history_prediction_replay:history_pure: Local sealed queries/contexts/global inputs absent
+PASS model_specification_hash_coverage:history_no_encoder
+PASS model_hash:history_no_encoder:history_no_encoder_17.pt
+PASS torch_checkpoint_state:history_no_encoder
+SKIP history_prediction_replay:history_no_encoder: Local sealed queries/contexts/global inputs absent
+Audit written: /private/tmp/recsys-final-recheck-v2.json
+
+New V2 CPU technical smoke and audit
+features user: 5,223 daily keys, 0.0s
+features item: 180,999 daily keys, 0.1s
+features artist: 124,385 daily keys, 0.1s
+features album: 163,199 daily keys, 0.1s
+features user_item: 184,637 daily keys, 0.1s
+features user_artist: 135,775 daily keys, 0.1s
+features user_album: 168,458 daily keys, 0.1s
+tabular tune manual/0: LL=0.506602, trees=15, 0.2s
+tabular tune manual/1: LL=0.500853, trees=17, 0.1s
+tabular tune all_auto/0: LL=0.500379, trees=22, 0.1s
+tabular tune all_auto/1: LL=0.528162, trees=23, 0.2s
+tabular select prefix=0: LL=0.468757, features=98
+tabular select prefix=1: LL=0.458166, features=112
+tabular select prefix=2: LL=0.469566, features=126
+tabular select prefix=3: LL=0.492814, features=140
+tabular final manual/17: reused
+tabular final all_auto/17: reused
+tabular final selected_auto/17: reused
+tabular final random_0/17: reused
+tabular final random_1/17: 0.1s
+tabular final random_2/17: 0.1s
+history seed=17 epoch=1 train=0.645132 tune=0.626775572852276
+history seed=17 epoch=2 train=0.589291 tune=0.640947460607647
+history seed=17 epoch=1 train=0.646028 tune=0.6286646345620063
+history seed=17 epoch=2 train=0.592947 tune=0.6419205612702266
+history seed=17 epoch=1 train=0.687268 tune=None
+history seed=17 epoch=1 train=0.644020 tune=None
+SELECTION LOCKED before confirmation-label release
+Confirmation evaluated; no selection changes permitted
+Report written: reports/v2/smoke/REPORT.md
+PASS required_final_artifacts
+PASS registration_to_final_hash_chain
+PASS frozen_execution_source_attestation
+PASS v1_original_experiment_source_preserved
+PASS registered_cohort_separation_and_test_period
+PASS fresh_users_exclude_prior_experiments
+PASS raw_uid_sampling_reproduces_registered_cohort
+PASS prepared_hash:sample_events.parquet
+PASS prepared_hash:queries.parquet
+PASS prepared_hash:test_labels.parquet
+PASS prepared_hash:features.parquet
+PASS prepared_hash:feature_groups.json
+PASS prepared_hash:manifest.json
+PASS prepared_hash:global_features.npy
+PASS prepared_hash:global_normalizer.json
+PASS prepared_hash:contexts/group_id.npy
+PASS prepared_hash:contexts/group_uid.npy
+PASS prepared_hash:contexts/query_group.npy
+PASS prepared_hash:contexts/group_available_count.npy
+PASS prepared_hash:contexts/history_ratio.npy
+PASS prepared_hash:contexts/history_ids.npy
+PASS prepared_hash:contexts/history_type.npy
+PASS prepared_hash:contexts/history_age.npy
+PASS prepared_hash:contexts/group_retained_count.npy
+PASS prepared_hash:contexts/history_organic.npy
+PASS prepared_hash:contexts/group_day.npy
+PASS prepared_hash:contexts/history_mask.npy
+PASS blind_probabilities_unchanged_after_outcome_join
+PASS stored_query_label_seal_alignment_and_cohorts
+PASS separately_stored_outcomes_match_final_join
+PASS saved_metric_recomputation:manual
+PASS saved_metric_recomputation:all_auto
+PASS saved_metric_recomputation:selected_auto
+PASS saved_metric_recomputation:random_0
+PASS saved_metric_recomputation:random_1
+PASS saved_metric_recomputation:random_2
+PASS saved_metric_recomputation:history_global
+PASS saved_metric_recomputation:history_pure
+PASS saved_metric_recomputation:history_no_encoder
+PASS saved_metric_recomputation:hybrid
+PASS primary_paired_user_bootstrap_recomputed
+PASS secondary_paired_user_bootstrap_recomputed:selected_auto
+PASS secondary_paired_user_bootstrap_recomputed:all_auto
+PASS secondary_paired_user_bootstrap_recomputed:hybrid
+PASS secondary_temporal_sensitivity_recomputed
+PASS independent_sklearn_tie_aware_ndcg
+PASS frozen_hybrid_composition
+PASS model_specification_hash_coverage:manual
+PASS model_hash:manual:manual_17.cbm
+PASS model_reload:manual
+PASS model_specification_hash_coverage:all_auto
+PASS model_hash:all_auto:all_auto_17.cbm
+PASS model_reload:all_auto
+PASS model_specification_hash_coverage:selected_auto
+PASS model_hash:selected_auto:selected_auto_17.cbm
+PASS model_reload:selected_auto
+PASS model_specification_hash_coverage:random_0
+PASS model_hash:random_0:random_0_17.cbm
+PASS model_reload:random_0
+PASS model_specification_hash_coverage:random_1
+PASS model_hash:random_1:random_1_17.cbm
+PASS model_reload:random_1
+PASS model_specification_hash_coverage:random_2
+PASS model_hash:random_2:random_2_17.cbm
+PASS model_reload:random_2
+PASS model_specification_hash_coverage:history_global
+PASS model_hash:history_global:history_global_17.pt
+PASS torch_checkpoint_state:history_global
+PASS history_prediction_replay:history_global
+PASS model_specification_hash_coverage:history_pure
+PASS model_hash:history_pure:history_pure_17.pt
+PASS torch_checkpoint_state:history_pure
+PASS history_prediction_replay:history_pure
+PASS model_specification_hash_coverage:history_no_encoder
+PASS model_hash:history_no_encoder:history_no_encoder_17.pt
+PASS torch_checkpoint_state:history_no_encoder
+PASS history_prediction_replay:history_no_encoder
+Audit written: /private/tmp/recsys-final-recheck-smoke.json

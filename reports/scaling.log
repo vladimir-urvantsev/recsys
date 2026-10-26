@@ -1,0 +1,24 @@
+features user: 10,194 daily keys, 0.3s
+features item: 378,424 daily keys, 0.6s
+features artist: 245,768 daily keys, 0.5s
+features album: 339,886 daily keys, 0.6s
+features user_item: 396,899 daily keys, 0.6s
+features user_artist: 297,860 daily keys, 0.5s
+features user_album: 366,982 daily keys, 0.5s
+{"users": 100, "history_events": 461314, "query_rows": 24803, "feature_seconds": 3.8291405830022995, "load_seconds": 0.3193606249988079, "matrix_bytes": 23249786, "features": 224, "peak_rss_bytes": 778584064, "rows_per_second": 6477.432588947363, "events_per_second": 120474.55297091739}
+features user: 32,179 daily keys, 0.8s
+features item: 1,074,271 daily keys, 2.3s
+features artist: 581,997 daily keys, 1.6s
+features album: 906,977 daily keys, 1.9s
+features user_item: 1,224,869 daily keys, 2.0s
+features user_artist: 908,824 daily keys, 2.4s
+features user_album: 1,111,452 daily keys, 1.9s
+{"users": 300, "history_events": 1455404, "query_rows": 69918, "feature_seconds": 13.628617125003075, "load_seconds": 0.15631362499698298, "matrix_bytes": 65538786, "features": 224, "peak_rss_bytes": 1136721920, "rows_per_second": 5130.234370714573, "events_per_second": 106790.29182864887}
+features user: 108,409 daily keys, 2.9s
+features item: 3,033,700 daily keys, 11.3s
+features artist: 1,300,314 daily keys, 6.4s
+features album: 2,409,117 daily keys, 9.3s
+features user_item: 4,089,964 daily keys, 8.4s
+features user_artist: 3,040,983 daily keys, 7.7s
+features user_album: 3,727,221 daily keys, 8.8s
+{"users": 1000, "history_events": 4884366, "query_rows": 232880, "feature_seconds": 57.496358374999545, "load_seconds": 0.27240758399420884, "matrix_bytes": 218300649, "features": 224, "peak_rss_bytes": 1727954944, "rows_per_second": 4050.343475340178, "events_per_second": 84950.87581275079}

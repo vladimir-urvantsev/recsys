@@ -1,0 +1,30 @@
+RUN ['.venv/bin/python', '-m', 'pytest', '-q']
+........................................................................ [ 51%]
+....................................................................     [100%]
+140 passed in 11.42s
+RUN ['.venv/bin/python', '-m', 'recsys_history_v2.run', '--config', 'configs/v2.yaml', '--phase', 'preflight']
+{
+  "platform": "Linux-6.8.0-147-generic-x86_64-with-glibc2.39",
+  "torch": "2.8.0+cu128",
+  "cuda_available": true,
+  "cuda_build": "12.8",
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "gpu_bytes": 85094825984,
+  "bf16_supported": true,
+  "is_pilot": false,
+  "n_users": 9000
+}
+RUN ['.venv/bin/python', '-u', '-m', 'recsys_history_v2.run', '--config', 'configs/v2.yaml', '--phase', 'prepare']
+features user: 967,694 daily keys, 55.2s
+features item: 15,209,263 daily keys, 154.9s
+features artist: 4,120,213 daily keys, 115.3s
+features album: 10,134,683 daily keys, 148.3s
+features user_item: 35,635,601 daily keys, 152.5s
+features user_artist: 26,609,620 daily keys, 143.0s
+features user_album: 32,484,602 daily keys, 154.2s
+RUN ['.venv/bin/python', '-u', 'scripts/profile_v2_gpu.py', '--config', 'configs/v2.yaml']
+Completed 10 warm-up / 0 measured steps
+Completed 10 warm-up / 100 measured steps
+GPU: NVIDIA A100-SXM4-80GB; mean step 0.0436s; allocated peak 0.69 GiB
+Projected train epoch 2.97 min; 70-epoch stress-model training-only scenario 3.46 h (excludes validation/AutoFE/preparation; not a guarantee)
+Capacity profile written: /workspace/recsys-v2/reports/v2/run/gpu_profile.json

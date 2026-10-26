@@ -1,0 +1,19 @@
+final fit manual seed=17: 9.5s
+final fit manual seed=29: 9.6s
+final fit manual seed=43: 9.8s
+final fit all_auto seed=17: 38.8s
+final fit all_auto seed=29: 39.1s
+final fit all_auto seed=43: 38.7s
+final fit selected_auto seed=17: 25.1s
+final fit selected_auto seed=29: 24.1s
+final fit selected_auto seed=43: 24.8s
+final fit random_auto seed=17: 24.5s
+final fit random_auto seed=29: 26.4s
+final fit random_auto seed=43: 27.4s
+final fit static seed=17: 4.7s
+final fit static seed=29: 5.0s
+final fit static seed=43: 4.3s
+final fit no_pair_relations seed=17: 7.4s
+final fit no_pair_relations seed=29: 7.4s
+final fit no_pair_relations seed=43: 7.8s
+Final held-out evaluation saved.

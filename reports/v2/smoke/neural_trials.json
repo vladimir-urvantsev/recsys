@@ -1,0 +1,66 @@
+[
+  {
+    "seed": 17,
+    "epochs": 1,
+    "params": {
+      "d_model": 16,
+      "n_layers": 1,
+      "n_heads": 2,
+      "dropout": 0.0,
+      "learning_rate": 0.003,
+      "pairwise_weight": 0.0
+    },
+    "pure": false,
+    "no_encoder": false,
+    "fit_seconds": 0.5520760840008734,
+    "tune_logloss": 0.626775572852276,
+    "epoch_log": [
+      {
+        "epoch": 1,
+        "train_logloss": 0.6451323239205563,
+        "tune_logloss": 0.626775572852276
+      },
+      {
+        "epoch": 2,
+        "train_logloss": 0.5892914448384448,
+        "tune_logloss": 0.640947460607647
+      }
+    ],
+    "parameters": 51125,
+    "device": "cpu",
+    "cuda_peak_bytes": null,
+    "checkpoint": "reports/v2/smoke/neural/trial_0.pt"
+  },
+  {
+    "seed": 17,
+    "epochs": 1,
+    "params": {
+      "d_model": 16,
+      "n_layers": 1,
+      "n_heads": 2,
+      "dropout": 0.0,
+      "learning_rate": 0.003,
+      "pairwise_weight": 0.1
+    },
+    "pure": false,
+    "no_encoder": false,
+    "fit_seconds": 0.3760509170097066,
+    "tune_logloss": 0.6286646345620063,
+    "epoch_log": [
+      {
+        "epoch": 1,
+        "train_logloss": 0.6460283404878484,
+        "tune_logloss": 0.6286646345620063
+      },
+      {
+        "epoch": 2,
+        "train_logloss": 0.592947208733645,
+        "tune_logloss": 0.6419205612702266
+      }
+    ],
+    "parameters": 51125,
+    "device": "cpu",
+    "cuda_peak_bytes": null,
+    "checkpoint": "reports/v2/smoke/neural/trial_1.pt"
+  }
+]

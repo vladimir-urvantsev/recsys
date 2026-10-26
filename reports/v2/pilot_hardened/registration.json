@@ -1,0 +1,229 @@
+{
+  "config": {
+    "study": "v2-technical-pilot-hardened",
+    "n_users": 50,
+    "development_users": 10,
+    "user_seed": 20261026,
+    "cohort_seed": 371,
+    "exclude_manifest": "reports/v2/pilot_excluded_users.json",
+    "day_seed": 1701,
+    "raw_dir": "data/raw",
+    "processed_dir": "data/processed/v2_pilot_hardened",
+    "output_dir": "reports/v2/pilot_hardened",
+    "warmup_days": 30,
+    "split_days": [
+      120,
+      150,
+      180
+    ],
+    "days_per_user": {
+      "train": 3,
+      "tune": 2,
+      "select": 2,
+      "test": 2
+    },
+    "embargo_days": 1,
+    "manual_windows": [
+      7,
+      30,
+      null
+    ],
+    "auto_windows": [
+      3,
+      14
+    ],
+    "auto_half_lives": [
+      10
+    ],
+    "model_seeds": [
+      17
+    ],
+    "threads": 2,
+    "iterations": 30,
+    "early_stopping": 10,
+    "hyper_grid": [
+      {
+        "depth": 3,
+        "learning_rate": 0.1,
+        "l2_leaf_reg": 5
+      },
+      {
+        "depth": 4,
+        "learning_rate": 0.1,
+        "l2_leaf_reg": 5
+      }
+    ],
+    "selection_prefixes": [
+      1,
+      2,
+      3
+    ],
+    "selection_feature_penalty": 1e-06,
+    "random_controls": 3,
+    "random_seed": 8821,
+    "bootstrap_samples": 100,
+    "context_recent": 8,
+    "context_older": 8,
+    "neural_max_epochs": 2,
+    "neural_patience": 1,
+    "neural_batch_groups": 4,
+    "neural_weight_decay": 0.0001,
+    "neural_grid": [
+      {
+        "d_model": 16,
+        "n_layers": 1,
+        "n_heads": 2,
+        "dropout": 0.0,
+        "learning_rate": 0.003,
+        "pairwise_weight": 0.0
+      },
+      {
+        "d_model": 16,
+        "n_layers": 1,
+        "n_heads": 2,
+        "dropout": 0.0,
+        "learning_rate": 0.003,
+        "pairwise_weight": 0.1
+      }
+    ],
+    "blend_weights": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "neural_ablations": [
+      "pure_history",
+      "no_event_encoder"
+    ],
+    "ablation_seeds": [
+      17
+    ],
+    "device": "cpu",
+    "mixed_precision": "fp32",
+    "embedding_buckets": {
+      "item": 257,
+      "artist": 67,
+      "album": 257,
+      "user": 31
+    },
+    "is_pilot": true,
+    "end_day": 210
+  },
+  "config_sha256": "11ab5901b8b9020e32229b4525f8e99425ff88cbe96e1c10123892410401f6b6",
+  "cohorts": {
+    "sampled_uids": [
+      9900,
+      14000,
+      31200,
+      90400,
+      91900,
+      185800,
+      262900,
+      268000,
+      297900,
+      317700,
+      343900,
+      349000,
+      355000,
+      359600,
+      363500,
+      368300,
+      371400,
+      383900,
+      432700,
+      454200,
+      457300,
+      465400,
+      518700,
+      542100,
+      563000,
+      578700,
+      581300,
+      601700,
+      612100,
+      627600,
+      650500,
+      663800,
+      664400,
+      669500,
+      676600,
+      678900,
+      740900,
+      753000,
+      772300,
+      879000,
+      941100,
+      950400,
+      955900,
+      956800,
+      957000,
+      964900,
+      972800,
+      977600,
+      980000,
+      999200
+    ],
+    "development_uids": [
+      91900,
+      185800,
+      359600,
+      383900,
+      454200,
+      457300,
+      678900,
+      772300,
+      956800,
+      972800
+    ],
+    "confirmation_uids": [
+      9900,
+      14000,
+      31200,
+      90400,
+      262900,
+      268000,
+      297900,
+      317700,
+      343900,
+      349000,
+      355000,
+      363500,
+      368300,
+      371400,
+      432700,
+      465400,
+      518700,
+      542100,
+      563000,
+      578700,
+      581300,
+      601700,
+      612100,
+      627600,
+      650500,
+      663800,
+      664400,
+      669500,
+      676600,
+      740900,
+      753000,
+      879000,
+      941100,
+      950400,
+      955900,
+      957000,
+      964900,
+      977600,
+      980000,
+      999200
+    ]
+  },
+  "excluded_manifest_sha256": "54f313540b1c53bf8423878d9a9ea7eb4b37909072a011ee94bc123cdb5d5ca0",
+  "primary_comparison": "history_global minus selected_auto, row-weighted LogLoss",
+  "primary_interval": "paired user-cluster bootstrap conditional on the observed month",
+  "primary_direction": "negative is better for history",
+  "freshness": "all v1 users excluded; confirmation future labels never selection targets; warm users",
+  "technical_pilot_only": true
+}

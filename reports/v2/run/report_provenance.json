@@ -1,0 +1,9 @@
+{
+  "selection_sha256": "2f239d771533708ff2b9e18baea1108c235b17e4c17aa86eaee9aec522c436c6",
+  "prediction_lock_sha256": "b84b773fee5dd147a06dc0f343c1784e987dd1c2f479986afcac0798e77b58b5",
+  "predictions_sha256": "1bd3fe06fb29def69ff06a0745ffd57ba2fff58f0b79ab2babe36bf6833bd070",
+  "model_fit_calls": 0,
+  "model_prediction_calls": 0,
+  "primary_delta_definition": "history_global minus selected_auto",
+  "memory_diagnostic_sha256": "5320a11b41341f94dde0f92b6ae464095f4b73c07449e43420acb86047589c0a"
+}

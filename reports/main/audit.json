@@ -1,0 +1,282 @@
+{
+  "passed": true,
+  "fit_calls": 0,
+  "feature_selection_calls": 0,
+  "absolute_numeric_tolerance": 1e-10,
+  "audit_script_sha256": "6b81238028e577c6feed77e0a4837a933b972bf9023ef0aecc82c9ce0eacbd1e",
+  "config": {
+    "n_users": 1000,
+    "user_seed": 2026,
+    "day_seed": 1701,
+    "raw_dir": "data/raw",
+    "processed_dir": "data/processed/main",
+    "output_dir": "reports/main",
+    "warmup_days": 30,
+    "split_days": [
+      210,
+      240,
+      270
+    ],
+    "days_per_user": {
+      "train": 6,
+      "tune": 2,
+      "select": 2,
+      "test": 3
+    },
+    "embargo_days": 1,
+    "manual_windows": [
+      7,
+      30,
+      null
+    ],
+    "auto_windows": [
+      2,
+      3,
+      10,
+      14,
+      60,
+      90
+    ],
+    "auto_half_lives": [
+      3,
+      10,
+      45
+    ],
+    "model_seeds": [
+      17,
+      29,
+      43
+    ],
+    "threads": 4,
+    "iterations": 500,
+    "early_stopping": 50,
+    "hyper_grid": [
+      {
+        "depth": 5,
+        "learning_rate": 0.06,
+        "l2_leaf_reg": 5
+      },
+      {
+        "depth": 7,
+        "learning_rate": 0.06,
+        "l2_leaf_reg": 5
+      },
+      {
+        "depth": 6,
+        "learning_rate": 0.1,
+        "l2_leaf_reg": 10
+      }
+    ],
+    "selection_prefixes": [
+      1,
+      2,
+      4,
+      6,
+      9
+    ],
+    "selection_feature_penalty": 1e-06,
+    "bootstrap_samples": 2000
+  },
+  "counts": {
+    "passed": 21,
+    "skipped": 0,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "name": "required_artifacts_present_and_readable",
+      "status": "passed",
+      "details": {
+        "prediction_rows": 58214,
+        "model_families": [
+          "constant",
+          "manual",
+          "all_auto",
+          "selected_auto",
+          "random_auto",
+          "static",
+          "no_pair_relations"
+        ],
+        "identical_model_specification_pairs": [
+          [
+            "selected_auto",
+            "random_auto"
+          ]
+        ],
+        "identical_specification_note": "Coincident controls are reported, not rerolled; they cannot establish independent selector benefit."
+      }
+    },
+    {
+      "name": "frozen_config_and_artifact_hash_chain",
+      "status": "passed",
+      "details": {
+        "config_and_artifact_chain": "verified",
+        "test_rows_used_for_selection": 0
+      }
+    },
+    {
+      "name": "current_source_matches_frozen_experiment",
+      "status": "passed",
+      "details": {
+        "source_files": 5,
+        "report_module_excluded_by_experiment_design": true
+      }
+    },
+    {
+      "name": "local_queries.parquet_hash",
+      "status": "passed",
+      "details": {
+        "file": "data/processed/main/queries.parquet"
+      }
+    },
+    {
+      "name": "local_features.parquet_hash",
+      "status": "passed",
+      "details": {
+        "file": "data/processed/main/features.parquet"
+      }
+    },
+    {
+      "name": "local_sample_events.parquet_hash",
+      "status": "passed",
+      "details": {
+        "file": "data/processed/main/sample_events.parquet"
+      }
+    },
+    {
+      "name": "saved_predictions_align_with_local_test_labels",
+      "status": "passed",
+      "details": {
+        "aligned_rows": 58214,
+        "columns": [
+          "uid",
+          "item_id",
+          "day",
+          "group_id",
+          "label"
+        ]
+      }
+    },
+    {
+      "name": "recomputed_saved_prediction_metrics_constant",
+      "status": "passed",
+      "details": {
+        "metrics_compared": 22,
+        "rows": 58214
+      }
+    },
+    {
+      "name": "recomputed_saved_prediction_metrics_manual",
+      "status": "passed",
+      "details": {
+        "metrics_compared": 22,
+        "rows": 58214
+      }
+    },
+    {
+      "name": "recomputed_saved_prediction_metrics_all_auto",
+      "status": "passed",
+      "details": {
+        "metrics_compared": 22,
+        "rows": 58214
+      }
+    },
+    {
+      "name": "recomputed_saved_prediction_metrics_selected_auto",
+      "status": "passed",
+      "details": {
+        "metrics_compared": 22,
+        "rows": 58214
+      }
+    },
+    {
+      "name": "recomputed_saved_prediction_metrics_random_auto",
+      "status": "passed",
+      "details": {
+        "metrics_compared": 22,
+        "rows": 58214
+      }
+    },
+    {
+      "name": "recomputed_saved_prediction_metrics_static",
+      "status": "passed",
+      "details": {
+        "metrics_compared": 22,
+        "rows": 58214
+      }
+    },
+    {
+      "name": "recomputed_saved_prediction_metrics_no_pair_relations",
+      "status": "passed",
+      "details": {
+        "metrics_compared": 22,
+        "rows": 58214
+      }
+    },
+    {
+      "name": "independent_sklearn_tie_aware_ndcg",
+      "status": "passed",
+      "details": {
+        "mixed_groups": 50,
+        "model_families": 7,
+        "independent_api": "sklearn.metrics.ndcg_score(ignore_ties=False, k=10)",
+        "max_absolute_error": 4.440892098500626e-16,
+        "sampling_seed": 2026
+      }
+    },
+    {
+      "name": "trained_model_reload_predictions_manual",
+      "status": "passed",
+      "details": {
+        "reloaded_models": 3,
+        "test_rows": 128,
+        "max_absolute_error": 0.0
+      }
+    },
+    {
+      "name": "trained_model_reload_predictions_all_auto",
+      "status": "passed",
+      "details": {
+        "reloaded_models": 3,
+        "test_rows": 128,
+        "max_absolute_error": 0.0
+      }
+    },
+    {
+      "name": "trained_model_reload_predictions_selected_auto",
+      "status": "passed",
+      "details": {
+        "reloaded_models": 3,
+        "test_rows": 128,
+        "max_absolute_error": 0.0
+      }
+    },
+    {
+      "name": "trained_model_reload_predictions_random_auto",
+      "status": "passed",
+      "details": {
+        "reloaded_models": 3,
+        "test_rows": 128,
+        "max_absolute_error": 0.0
+      }
+    },
+    {
+      "name": "trained_model_reload_predictions_static",
+      "status": "passed",
+      "details": {
+        "reloaded_models": 3,
+        "test_rows": 128,
+        "max_absolute_error": 0.0
+      }
+    },
+    {
+      "name": "trained_model_reload_predictions_no_pair_relations",
+      "status": "passed",
+      "details": {
+        "reloaded_models": 3,
+        "test_rows": 128,
+        "max_absolute_error": 0.0
+      }
+    }
+  ]
+}
